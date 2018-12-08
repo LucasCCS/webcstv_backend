@@ -1,0 +1,19 @@
+.invl-form-metodo-pagamento {
+    .invl-form-metodo-pagamento-list {
+        list-style: none;
+        padding-left: 0px;
+        li {
+            display: inline-block;
+            img {
+                width: 230px;
+                opacity: .6;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        li+li {
+            margin-top: 10px;
+        }
+    }
+}

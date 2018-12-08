@@ -1,0 +1,15 @@
+.invl-feature {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, .3);
+    position: absolute;
+    border-radius: 6px;
+    margin-top: 10px;
+    min-width: 300px;
+    text-align: left;
+    display: none;
+}
+
+.show {
+    display: block;
+}

@@ -1,0 +1,382 @@
+// invl-plans
+.invl-plans {
+    margin-top: 15px;
+    // invl-plans-header
+    .invl-plans-header {
+        color: #404449;
+        line-height: 1px;
+        margin-top: 100px;
+        h2 {
+            font-family: 'Ubuntu Medium';
+            font-size: 46px;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-family: 'Ubuntu Light Italic';
+            font-size: 30px;
+            margin-top: -10px;
+        }
+    }
+    // invl-plans-list
+    .invl-plans-list {
+        margin-top: 80px;
+        @media (max-width: 768px) {
+            margin-top: 40px;
+        }
+        // destaque
+        .destaque {
+            margin-top: -40px;
+            .invl-plans-list-item-header {
+                border-top-left-radius: 0px !important;
+            }
+        }
+        // invl-plans-list-item
+        .invl-plans-list-item {
+            @media (max-width: 768px) {
+                margin-top: 20px;
+            }
+            small {
+                opacity: .8;
+                font-family: 'Ubuntu Regular';
+                font-size: 11px;
+            }
+            // btn-plans
+            .btn-plans {
+                font-family: 'Ubuntu Medium';
+                text-transform: uppercase;
+                border-radius: 4px;
+                font-size: 20px;
+            }
+            // invl-plans-list-item-header-destaque
+            .invl-plans-list-item-header-destaque {
+                background-color: #383838;
+                border-top-left-radius: 40px;
+                border-top-right-radius: 40px;
+                text-align: center;
+                font-family: 'Ubuntu Bold';
+                font-size: 14px;
+                color: #fff;
+                text-transform: uppercase;
+                line-height: 40px;
+            }
+            // invl-plans-list-item-header
+            .invl-plans-list-item-header {
+                background-color: #ff8e0b;
+                padding: 40px 20px 20px 20px;
+                color: #fff;
+                text-align: center;
+                border-top-left-radius: 20px;
+                h4 {
+                    font-family: 'Ubuntu Medium';
+                    text-transform: uppercase;
+                    font-size: 36px;
+                }
+                p {
+                    font-family: 'Ubuntu Light Italic';
+                    font-size: 24px;
+                    margin-top: -19px;
+                }
+            }
+            // invl-plans-list-item-body
+            .invl-plans-list-item-body {
+                border-style: solid;
+                border-color: #dcdcdc;
+                border-width: 0px 2px 2px 2px;
+                border-bottom-left-radius: 20px;
+                padding: 20px;
+                // invl-plans-list-item-price
+                .invl-plans-list-item-price {
+                    text-align: center;
+                    // old-price
+                    .old-price {
+                        color: #df4141;
+                        text-decoration: line-through;
+                    }
+                    // new-price
+                    .new-price {
+                        text-align: center;
+                        h4 {
+                            font-family: 'Ubuntu Bold';
+                            font-size: 67px;
+                            color: #ff8e0b;
+                            span {
+                                font-family: 'Ubuntu Bold';
+                                font-size: 20.54px;
+                                color: #232427;
+                                opacity: .8;
+                            }
+                            &:before {
+                                content: 'por R$';
+                                position: absolute;
+                                margin-left: -15px;
+                                margin-top: 15px;
+                                font-family: 'Ubuntu Bold';
+                                font-size: 13px;
+                                width: 10px;
+                                color: #232427;
+                                opacity: .8;
+                            }
+                        }
+                        p {
+                            font-family: 'Ubuntu Bold';
+                            font-size: 13px;
+                            color: #232427;
+                            margin-top: -20px;
+                            opacity: .8;
+                        }
+                    }
+                }
+                // invl-plans-list-item-features
+                .invl-plans-list-item-features {
+                    margin-top: 20px;
+                    // invl-plans-list-item-features-list
+                    .invl-plans-list-item-features-list {
+                        list-style: none;
+                        padding-left: 0px;
+                        // invl-plans-list-item-features-list-item
+                        .invl-plans-list-item-features-list-item {
+                            font-family: 'Ubuntu Medium';
+                            font-size: 19px;
+                            color: #ff8e0b;
+                            strong {
+                                font-family: 'Ubuntu Bold';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// invl-call-to-action-teste
+.invl-call-to-action-teste {
+    background-color: #ff9820;
+    padding: 30px 0px;
+    margin-top: 50px;
+    h2 {
+        font-family: 'Ubuntu Medium';
+        font-size: 60px;
+    }
+    // btn-default
+    .btn-default {
+        font-family: 'Ubuntu Medium';
+        font-size: 40px;
+        border-radius: 35px;
+    }
+    // invl-call-to-action-teste-body
+    .invl-call-to-action-teste-body {
+        margin-top: 25px;
+        // invl-call-to-action-teste-channels-list
+        .invl-call-to-action-teste-channels-list {
+            padding-left: 0px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            // invl-call-to-action-teste-channels-list-item
+            .invl-call-to-action-teste-channels-list-item {
+                img {
+                    opacity: .8;
+                }
+            }
+            .invl-call-to-action-teste-channels-list-item+.invl-call-to-action-teste-channels-list-item {
+                margin-left: 50px;
+            }
+        }
+    }
+}
+
+// invl-about
+.invl-about {
+    position: relative;
+    padding: 60px 0px 50px 0px;
+    @media (max-width: 768px) {
+        padding: 60px 0px 280px 0px;
+    }
+    h2 {
+        font-family: 'Ubuntu Light';
+        font-size: 65px;
+        strong {
+            font-family: 'Ubuntu Bold';
+        }
+    }
+    p {
+        font-family: 'Ubuntu Regular';
+        font-size: 18px;
+        color: #474747;
+    }
+    a {
+        font-family: 'Ubuntu Regular';
+        font-size: 36px;
+        color: #232f79;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    img {
+        position: absolute;
+        bottom: -50px;
+        @media (max-width: 768px) {
+            bottom: -280px;
+            margin-left: -10%;
+        }
+    }
+}
+
+// invl-pagamento-qualidade
+.invl-pagamento-qualidade {
+    background-color: #162b7c;
+    padding: 40px 0px;
+    // invl-pagamento-qualidade-header
+    .invl-pagamento-qualidade-header {
+        text-align: right;
+        h3 {
+            font-family: 'Ubuntu Bold';
+            font-size: 40px;
+            color: #fff;
+            text-transform: uppercase;
+            @media (max-width: 768px) {
+                font-size: 30px;
+            }
+            span {
+                color: #ff9820;
+            }
+        }
+        h2 {
+            font-family: 'Ubuntu Light Italic';
+            font-size: 48px;
+            color: rgba(255, 255, 255, .56);
+            text-transform: uppercase;
+            margin-top: -10px;
+            @media (max-width: 768px) {
+                font-size: 38px;
+            }
+        }
+    }
+    // invl-pagamento-qualidade-body
+    .invl-pagamento-qualidade-body {
+        // invl-pagamento-qualidade-list
+        .invl-pagamento-qualidade-list {
+            margin-top: 50px;
+            // invl-pagamento-qualidade-list-item
+            .invl-pagamento-qualidade-list-item {
+                text-align: center;
+                padding: 0px 40px;
+                img {
+                    margin-bottom: 20px;
+                }
+                h4 {
+                    font-family: 'Ubuntu Bold';
+                    font-size: 24px;
+                    color: #fff;
+                    text-transform: uppercase;
+                }
+                p {
+                    font-family: 'Ubuntu Light Italic';
+                    color: #fff;
+                    font-size: 14px;
+                    text-align: justify;
+                }
+            }
+            [class*="col-"]+[class*="col-"] {
+                border-left: 3px solid #1a3392;
+            }
+        }
+    }
+}
+
+// invl-pagamento-qualidade-fale-conosco
+.invl-pagamento-qualidade-fale-conosco {
+    background-color: #1a3392;
+    padding: 20px 0px 20px 0px;
+    a {
+        font-family: 'Ubuntu Light';
+        font-size: 19px;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+// invl-melhores-filmes
+.invl-melhores-filmes {
+    background-image: url('../images/filmes-bg.jpg');
+    background-size: cover;
+    background-position: fixed;
+    padding: 120px 0px;
+    h2 {
+        font-family: 'Ubuntu Light';
+        font-size: 72px;
+        color: #fff;
+    }
+    a {
+        position: absolute;
+        font-family: 'Ubuntu Light';
+        font-size: 33px;
+        color: #fff;
+        text-decoration: none;
+        bottom: -90px;
+    }
+}
+
+// invl-footer
+.invl-footer {
+    // invl-footer-top
+    .invl-footer-top {
+        background-color: #222222;
+        padding: 40px 0px;
+        h4 {
+            font-family: 'Ubuntu Bold';
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        #desc {
+            @media (max-width: 768px) {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            p {
+                font-family: 'Ubuntu Light Italic';
+                font-size: 12px;
+                color: #fff;
+            }
+        }
+        // invl-footer-list
+        .invl-footer-list {
+            list-style: none;
+            padding-left: 0px;
+            li {
+                a {
+                    font-family: 'Ubuntu Light';
+                    font-size: 14px;
+                    color: #fff;
+                    text-decoration: none;
+                    line-height: 30px;
+                }
+            }
+        }
+        // invl-footer-social-list
+        .invl-footer-social-list {
+            list-style: none;
+            padding-left: 0px;
+            li {
+                display: inline-block;
+                background-color: #111;
+                padding: 5px;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+    // invl-footer-bottom
+    .invl-footer-bottom {
+        padding: 20px 0px 5px 0px;
+        background-color: #111111;
+        color: rgba(255, 255, 255, .35);
+    }
+}

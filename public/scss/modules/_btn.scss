@@ -1,0 +1,28 @@
+.btn {
+    padding: 6px 25px;
+    border-radius: 25px;
+}
+
+.btn-primary {
+    background-color: #ff9820;
+    border-color: #ff9820;
+    &:hover {
+        background-color: darken(#ff9820, 5%) !important;
+        border-color: darken(#ff9820, 5%);
+    }
+}
+
+.btn-default {
+    background-color: #262626;
+    border-color: #262626;
+    color: #fff;
+    &:hover {
+        background-color: darken(#262626, 5%) !important;
+        border-color: darken(#262626, 5%);
+    }
+}
+
+.btn-hollow {
+    background-color: transparent;
+    border-width: 2px;
+}

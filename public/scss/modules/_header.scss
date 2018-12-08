@@ -1,0 +1,233 @@
+// invl-header
+.invl-header {
+    position: relative;
+    &:after {
+        content: '\f107';
+        font-family: 'Font Awesome\ 5 Free';
+        font-weight: 900;
+        position: absolute;
+        font-size: 45px;
+        color: #ff9820;
+        text-align: center;
+        line-height: 80px;
+        background-color: #fff;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        left: 45vw;
+        margin-top: -40px;
+        @media(max-width: 768px) {
+            left: 32%;
+        }
+    }
+    // invl-navbar
+    .invl-navbar {
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+    .header-page {
+        background-size: cover;
+        .header-page-content {
+            padding-top: 120px;
+            padding-bottom: 70px;
+            text-align: center;
+            h1 {
+                font-family: 'Ubuntu Bold';
+                font-size: 40px;
+                color: #fff;
+                text-transform: uppercase;
+                span {
+                    font-family: 'Ubuntu Italic';
+                }
+            }
+        }
+    }
+    // carousel-item
+    .carousel-item {
+        min-height: 550px;
+        background-size: cover;
+        padding-top: 100px;
+        @media (max-width: 768px) {
+            padding-top: 70px;
+            background-position: center;
+        }
+        h1 {
+            font-family: 'Ubuntu Bold';
+            font-size: 40px;
+            color: #fff;
+            text-transform: uppercase;
+            span {
+                font-family: 'Ubuntu Italic';
+            }
+        }
+        #teste-gratuito {
+            margin-top: 150px;
+            small {
+                font-family: 'Ubuntu Regular';
+                font-size: 11px;
+                color: rgba(255, 255, 255, .6);
+            }
+        }
+        #area-cliente {
+            margin-top: 150px;
+            small {
+                font-family: 'Ubuntu Regular';
+                font-size: 11px;
+                color: rgba(255, 255, 255, .6);
+            }
+        }
+        // btn-carousel
+        .btn-carousel {
+            font-family: 'Ubuntu Regular';
+            text-transform: uppercase;
+            border-radius: 4px;
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+            font-size: 30px;
+        }
+    }
+}
+
+// invl-navbar
+.invl-navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    padding: 20px 0px;
+    // invl-navbar-brand
+    .invl-navbar-brand {
+        img {
+            width: 220px;
+        }
+    }
+    // invl-navbar-nav
+    .invl-navbar-nav {
+        .invl-navbar-navlist {
+            list-style: none;
+            li {
+                display: inline-block;
+                a {
+                    font-family: 'Ubuntu Bold';
+                    font-size: 14px;
+                    color: #fff;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    opacity: .8;
+                    transition: all .1s ease-in;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                .btn {
+                    opacity: 1;
+                }
+            }
+            li+li {
+                margin-left: 25px;
+            }
+        }
+    }
+}
+
+//  invl-navbar-sm
+.invl-navbar-sm {
+    position: fixed;
+    background-color: #fff;
+    z-index: 5 !important;
+    display: none;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, .2);
+    padding: 15px 0px 0px 0px;
+    .invl-navbar-brand {
+        img {
+            width: 180px;
+        }
+    }
+    .invl-navbar-nav {
+        .invl-navbar-navlist {
+            list-style: none;
+            li {
+                display: inline-block;
+                a {
+                    color: #000;
+                    font-size: 12px;
+                }
+                .btn.btn-hollow {
+                    color: #ff9820;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+                .btn {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .invl-navbar-toggle {
+        color: #ff9820;
+    }
+}
+
+// invl-navbar-nav-sm
+.invl-navbar-nav-sm {
+    display: none;
+    .invl-navbar-navlist {
+        position: fixed;
+        background-color: #e47e07;
+        padding: 100px 10px;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 150vh !important;
+        z-index: 1;
+        text-align: center;
+        list-style: none;
+        overflow: auto;
+        li {
+            a {
+                font-family: 'Ubuntu Bold';
+                font-size: 22px !important;
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                opacity: .8;
+                transition: all .1s ease-in;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .btn {
+                opacity: 1;
+            }
+        }
+        li+li {
+            margin-top: 30px;
+        }
+    }
+}
+
+// invl-collapse-mb
+.invl-collapse-mb {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+// invl-navbar-toggle
+.invl-navbar-toggle {
+    display: none;
+    font-size: 25px;
+    margin-right: 10px;
+    margin-top: -5px;
+    color: #fff;
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+.show {
+    display: block;
+}

@@ -1,0 +1,32 @@
+.modal-content {
+    border: none;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, .3);
+}
+
+.modal-title {
+    font-family: 'Ubuntu Regular';
+}
+
+// invl-modal-form
+.invl-modal-form {
+    h4 {
+        font-family: 'Ubuntu Bold';
+        text-transform: uppercase;
+    }
+    .form-control+.form-control {
+        margin-top: 5px;
+    }
+    .invl-modal-form-footer {
+        margin-top: 10px;
+        .invl-modal-form-options {
+            ul {
+                list-style: none;
+                padding-left: 0px;
+                a {
+                    font-size: 14px;
+                    margin-top: -5px;
+                }
+            }
+        }
+    }
+}
