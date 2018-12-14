@@ -15,8 +15,8 @@
                 ?>
                 <form method="post">
                     <div class="row">
-                        <div class="col-12">
-                            CardSharing <input type="radio" name="plano_tipo"  value="<?=PLANO_TIPO_CS;?>" <?=set_radio('tipo',PLANO_TIPO_CS,$plano['tipo'] == PLANO_TIPO_CS ? TRUE : FALSE);?>> | IPTV <input type="radio" name="plano_tipo" value="<?=PLANO_TIPO_IPTV;?>" <?=set_radio('tipo',PLANO_TIPO_IPTV,$plano['tipo'] == PLANO_TIPO_IPTV ? TRUE : FALSE);?>>
+                        <div class="col-12 text-center">
+                             <input type="radio" name="plano_tipo" value="<?=PLANO_TIPO_CS?>" id="cs" <?=set_radio('plano_tipo',PLANO_TIPO_CS,$plano['plano_tipo'] == PLANO_TIPO_CS ? TRUE : FALSE);?>> <label for="cs" style="padding-left: 0px;">CardSharing</label> | <input type="radio" name="plano_tipo" value="<?=PLANO_TIPO_IPTV?>" id="iptv" <?=set_radio('plano_tipo',PLANO_TIPO_IPTV,$plano['plano_tipo'] == PLANO_TIPO_IPTV ? TRUE : FALSE);?>> <label for="iptv" style="padding-left: 0px;">IPTV</label>
                         </div>
                     </div>
                     <div class="row">
@@ -25,31 +25,26 @@
                             <input class="form-control form-control-lg" type="text" name="titulo" value="<?=$plano['titulo'];?>">
                            
                         </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                            <label>Sub-Título</label>
+                            <input class="form-control form-control-lg" type="text" name="subtitulo"  value="<?=$plano['subtitulo'];?>">   
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <label>Duração do Plano (em dias)</label>
+                            <input class="form-control form-control-lg" type="text" name="dias" value="<?=$plano['dias'];?>">
+                        </div>
                         <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label>Valor</label>
+                            <label>Valor do Plano</label>
                             <input class="form-control form-control-lg" type="text" name="valor" value="<?=$plano['valor'];?>">
                             <small>Não é necessário inserir o "$".</small>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label>Número de Operadoras</label>
-                            <input class="form-control form-control-lg" type="text" name="operadoras" value="<?=$plano['operadoras'];?>">
-                            <small>Número de operadoras limite.</small>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label>Número de Conexões</label>
-                            <input class="form-control form-control-lg" type="text" name="conexoes" value="<?=$plano['conexoes'];?>">
-                            <small>Número de conexões limite.</small>
+                            <label>Valor Antigo</label>
+                            <input class="form-control form-control-lg" type="text" name="valor_antigo" placeholder="0,00" value="<?=$plano['valor_antigo'];?>">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <label>Duração</label>
-                            <input class="form-control form-control-lg" type="text" name="dias" value="<?=$plano['dias'];?>">
-                            <small>Duração padrão do plano em dia(s).</small>
-                        </div>
-                    </div>  
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-6">
                             <label>Código PagSeguro</label>
@@ -62,25 +57,22 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <label>Url Gerador de Teste</label>
+                            <input class="form-control form-control-lg" type="text" name="url_teste" value="<?=$plano['url_teste'];?>">
+                           
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-12">
                             <label>Descrição</label>
                            <textarea class="form-control" name="descricao" rows="4"><?=$plano['descricao'];?></textarea>
                             <small>Neste campo é permitido a utilização de tags html.</small>
                         </div>
-                    </div>     
-                    <div class="row">
-                        <div class="col-12">
-                            <label>Chave DES</label>
-                            <input class="form-control form-control-lg" type="text" name="chave_des" <?=$plano['chave_des'];?>>
-                        </div>
-                    </div>   
-                    <div class="row">
-                        <div class="col-12">
-                            <label>Tipo</label><br>
-                            Servidor Normal <input type="radio" name="tipo" value="<?=PLANO_NORMAL;?>" <?php echo set_value('tipo', $plano['tipo']) == PLANO_NORMAL ? "checked" : "";?>> Servidor Net <input type="radio" name="tipo" value="<?=PLANO_NET;?>" <?php echo set_value('tipo', $plano['tipo']) == PLANO_NET ? "checked" : "";?>>
-                        </div>
-                    </div>              
-                    <input class="btn btn-success" type="submit" name="editar_plano" value="Concluir">
+                    </div>          
+                    <div class="text-right">      
+                        <input class="btn btn-primary btn-lg" type="submit" name="editar_plano" value="Concluir">
+                    </div>
                 </form>
             </div>
         </div>

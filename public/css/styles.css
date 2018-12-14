@@ -6834,7 +6834,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: 'Ubuntu Italic';
   src: url("fonts/Ubuntu-Italic.ttf"); }
 body {
-  overflow-x: none; }
+  overflow-x: hidden !important; }
 
 .btn {
   padding: 6px 25px;
@@ -6846,6 +6846,33 @@ body {
   .btn-primary:hover {
     background-color: #ff8c07 !important;
     border-color: #ff8c07; }
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: #fff;
+  background-color: #ff9820;
+  border-color: #ff9820; }
+
+.btn-info {
+  background-color: #1062c9;
+  border-color: #1062c9; }
+  .btn-info:hover {
+    background-color: #0e56b1 !important;
+    border-color: #0e56b1; }
+
+.btn-info.disabled,
+.btn-info:disabled {
+  color: #fff;
+  background-color: #1062c9;
+  border-color: #1062c9; }
+
+.invl-cadastro-form .btn-cadastro {
+  background-color: transparent;
+  color: #ff9820; }
+  .invl-cadastro-form .btn-cadastro:hover {
+    background-color: #ff8c07 !important;
+    border-color: #ff8c07;
+    color: #fff; }
 
 .btn-default {
   background-color: #262626;
@@ -6900,7 +6927,7 @@ body {
         .invl-header .header-page .header-page-content h1 span {
           font-family: 'Ubuntu Italic'; }
   .invl-header .carousel-item {
-    min-height: 550px;
+    min-height: 590px;
     background-size: cover;
     padding-top: 100px; }
     @media (max-width: 768px) {
@@ -6911,7 +6938,8 @@ body {
       font-family: 'Ubuntu Bold';
       font-size: 40px;
       color: #fff;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3); }
       .invl-header .carousel-item h1 span {
         font-family: 'Ubuntu Italic'; }
     .invl-header .carousel-item #teste-gratuito {
@@ -7030,42 +7058,84 @@ body {
 .show {
   display: block; }
 
-.invl-plans {
+.invl-plans,
+.invl-plans-iptv {
   margin-top: 15px; }
-  .invl-plans .invl-plans-header {
+  .invl-plans .invl-plans-header,
+  .invl-plans-iptv .invl-plans-header {
     color: #404449;
     line-height: 1px;
     margin-top: 100px; }
-    .invl-plans .invl-plans-header h2 {
+    .invl-plans .invl-plans-header h2,
+    .invl-plans-iptv .invl-plans-header h2 {
       font-family: 'Ubuntu Medium';
       font-size: 46px;
       text-transform: uppercase; }
-    .invl-plans .invl-plans-header h3 {
+    .invl-plans .invl-plans-header h3,
+    .invl-plans-iptv .invl-plans-header h3 {
       font-family: 'Ubuntu Light Italic';
       font-size: 30px;
       margin-top: -10px; }
-  .invl-plans .invl-plans-list {
+  .invl-plans .invl-plans-nav,
+  .invl-plans-iptv .invl-plans-nav {
+    margin-top: 50px; }
+    .invl-plans .invl-plans-nav .invl-plans-nav-list,
+    .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list {
+      background-color: #e9e9e9;
+      border-radius: 30px;
+      padding: 5px;
+      list-style: none; }
+      .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item,
+      .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item {
+        display: inline-block;
+        width: 32.65%;
+        text-align: center; }
+        .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link,
+        .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link {
+          font-family: 'Ubuntu Medium';
+          color: #ff8e0b; }
+          .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link:hover,
+          .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link:hover {
+            background-color: #d0d0d0;
+            border-radius: 40px; }
+        .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link.active,
+        .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link.active {
+          color: #fff;
+          background-color: #ff8e0b;
+          border-radius: 40px; }
+      .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item + .nav-item,
+      .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item + .nav-item {
+        margin-left: 1%; }
+  .invl-plans .invl-plans-list,
+  .invl-plans-iptv .invl-plans-list {
     margin-top: 80px; }
     @media (max-width: 768px) {
-      .invl-plans .invl-plans-list {
+      .invl-plans .invl-plans-list,
+      .invl-plans-iptv .invl-plans-list {
         margin-top: 40px; } }
-    .invl-plans .invl-plans-list .destaque {
+    .invl-plans .invl-plans-list .destaque,
+    .invl-plans-iptv .invl-plans-list .destaque {
       margin-top: -40px; }
-      .invl-plans .invl-plans-list .destaque .invl-plans-list-item-header {
+      .invl-plans .invl-plans-list .destaque .invl-plans-list-item-header,
+      .invl-plans-iptv .invl-plans-list .destaque .invl-plans-list-item-header {
         border-top-left-radius: 0px !important; }
     @media (max-width: 768px) {
-      .invl-plans .invl-plans-list .invl-plans-list-item {
+      .invl-plans .invl-plans-list .invl-plans-list-item,
+      .invl-plans-iptv .invl-plans-list .invl-plans-list-item {
         margin-top: 20px; } }
-    .invl-plans .invl-plans-list .invl-plans-list-item small {
+    .invl-plans .invl-plans-list .invl-plans-list-item small,
+    .invl-plans-iptv .invl-plans-list .invl-plans-list-item small {
       opacity: .8;
       font-family: 'Ubuntu Regular';
       font-size: 11px; }
-    .invl-plans .invl-plans-list .invl-plans-list-item .btn-plans {
+    .invl-plans .invl-plans-list .invl-plans-list-item .btn-plans,
+    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .btn-plans {
       font-family: 'Ubuntu Medium';
       text-transform: uppercase;
       border-radius: 4px;
       font-size: 20px; }
-    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header-destaque {
+    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header-destaque,
+    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header-destaque {
       background-color: #383838;
       border-top-left-radius: 40px;
       border-top-right-radius: 40px;
@@ -7075,43 +7145,53 @@ body {
       color: #fff;
       text-transform: uppercase;
       line-height: 40px; }
-    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header {
+    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header,
+    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header {
       background-color: #ff8e0b;
       padding: 40px 20px 20px 20px;
       color: #fff;
       text-align: center;
       border-top-left-radius: 20px; }
-      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header h4 {
+      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header h4,
+      .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header h4 {
         font-family: 'Ubuntu Medium';
         text-transform: uppercase;
         font-size: 36px; }
-      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header p {
+      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header p,
+      .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header p {
         font-family: 'Ubuntu Light Italic';
         font-size: 24px;
         margin-top: -19px; }
-    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body {
+    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body,
+    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body {
       border-style: solid;
       border-color: #dcdcdc;
       border-width: 0px 2px 2px 2px;
       border-bottom-left-radius: 20px;
       padding: 20px; }
-      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price {
+      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price,
+      .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price {
         text-align: center; }
-        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .old-price {
+        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .old-price,
+        .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .old-price {
           color: #df4141;
           text-decoration: line-through; }
-        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price {
+        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price,
+        .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price {
           text-align: center; }
-          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 {
+          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4,
+          .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 {
             font-family: 'Ubuntu Bold';
             font-size: 67px;
             color: #ff8e0b; }
-            .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 span {
+            .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 span,
+            .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 span {
               font-family: 'Ubuntu Bold';
               font-size: 20.54px;
               color: #232427;
               opacity: .8; }
-            .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4:before {
+            .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4:before,
+            .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4:before {
               content: 'por R$';
               position: absolute;
               margin-left: -15px;
@@ -7121,23 +7201,47 @@ body {
               width: 10px;
               color: #232427;
               opacity: .8; }
-          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price p {
+          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price p,
+          .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price p {
             font-family: 'Ubuntu Bold';
             font-size: 13px;
             color: #232427;
             margin-top: -20px;
             opacity: .8; }
-      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features {
+      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features,
+      .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features {
         margin-top: 20px; }
-        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list {
+        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list,
+        .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list {
           list-style: none;
           padding-left: 0px; }
-          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list .invl-plans-list-item-features-list-item {
+          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li,
+          .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li {
             font-family: 'Ubuntu Medium';
             font-size: 19px;
             color: #ff8e0b; }
-            .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list .invl-plans-list-item-features-list-item strong {
+            .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li strong,
+            .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li strong {
               font-family: 'Ubuntu Bold'; }
+
+.invl-plans-iptv {
+  background-color: #00469e !important;
+  padding: 20px 0px 60px 0px; }
+  .invl-plans-iptv .invl-plans-header {
+    color: #fff; }
+  .invl-plans-iptv .invl-plans-list-item-body {
+    background-color: #fff !important; }
+  .invl-plans-iptv .invl-plans-list-item-header {
+    background-color: #1062c9 !important; }
+  .invl-plans-iptv .invl-plans-list-item-price .new-price h4 {
+    color: #1062c9 !important; }
+  .invl-plans-iptv .invl-plans-list-item-features-list li {
+    color: #1062c9 !important; }
+  .invl-plans-iptv .nav-item .nav-link {
+    color: #1062c9 !important; }
+  .invl-plans-iptv .nav-item .nav-link.active {
+    color: #fff !important;
+    background-color: #1062c9 !important; }
 
 .invl-call-to-action-teste {
   background-color: #ff9820;
@@ -7305,9 +7409,69 @@ body {
   background-color: #111111;
   color: rgba(255, 255, 255, 0.35); }
 
+.invl-faq .invl-faq-content {
+  padding-top: 100px;
+  padding-bottom: 50px; }
+  .invl-faq .invl-faq-content .invl-faq-list .invl-faq-list-item {
+    position: relative;
+    list-style: none;
+    padding: 30px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+    .invl-faq .invl-faq-content .invl-faq-list .invl-faq-list-item h3 {
+      font-size: 2rem; }
+    .invl-faq .invl-faq-content .invl-faq-list .invl-faq-list-item:after {
+      content: '\f107';
+      font-family: 'Font Awesome\ 5 Free';
+      font-weight: 900;
+      position: absolute;
+      font-size: 30px;
+      color: rgba(0, 0, 0, 0.5);
+      right: 0;
+      top: 0;
+      margin-top: 40px; }
+    .invl-faq .invl-faq-content .invl-faq-list .invl-faq-list-item:last-of-type {
+      border: none; }
+
+.invl-cadastro .invl-cadastro-form {
+  margin-top: 30%;
+  font-family: 'Ubuntu Regular'; }
+  .invl-cadastro .invl-cadastro-form h4 small span {
+    opacity: .8;
+    font-size: 14px; }
+    .invl-cadastro .invl-cadastro-form h4 small span a {
+      color: #000;
+      opacity: .8;
+      text-decoration: none; }
+.invl-cadastro .invl-cadastro-imagem {
+  height: 100vh;
+  background-color: #fff;
+  background-image: url("../images/header-bg-01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom; }
+
 .modal-content {
   border: none;
   box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.3); }
+  .modal-content .tab-content {
+    padding-bottom: 10px; }
+  .modal-content .nav-tabs {
+    border-bottom: none; }
+    .modal-content .nav-tabs .nav-item .nav-link {
+      background-color: #fff;
+      font-family: 'Ubuntu Medium';
+      border-color: #fff;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 18px;
+      opacity: .7; }
+    .modal-content .nav-tabs .nav-item .active {
+      background-color: #ff9820;
+      border-color: #ff9820;
+      color: #fff;
+      opacity: 1; }
+    .modal-content .nav-tabs .nav-item + .nav-item {
+      margin-left: 5px; }
 
 .modal-title {
   font-family: 'Ubuntu Regular'; }

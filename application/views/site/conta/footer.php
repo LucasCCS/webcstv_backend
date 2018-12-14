@@ -1,11 +1,4 @@
-    <!-- invl-footer -->
-    <footer>
-        <div class="container">
-            <div class="text-center">
-                <small class="text-muted">2018 SeuCS - todos os direitos reservados.</small>
-            </div>
-        </div>
-    </footer>
+
     <!-- modal -->
     <?=$this->load->view('site/default/modal',[],TRUE);?>
     <!-- scripts -->

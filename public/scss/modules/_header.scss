@@ -48,7 +48,7 @@
     }
     // carousel-item
     .carousel-item {
-        min-height: 550px;
+        min-height: 590px;
         background-size: cover;
         padding-top: 100px;
         @media (max-width: 768px) {
@@ -60,6 +60,7 @@
             font-size: 40px;
             color: #fff;
             text-transform: uppercase;
+            text-shadow: 2px 2px 20px rgba(0, 0, 0, .3);
             span {
                 font-family: 'Ubuntu Italic';
             }

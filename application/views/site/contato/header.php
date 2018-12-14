@@ -1,24 +1,18 @@
+<?=$this->load->view('site/default/navbar-fixed',[],TRUE);?>
 <!-- invl-header -->
-<header class="invl-header invl-header-sm">
-    <?=$this->load->view('site/default/header-top',[],TRUE);?>
-    <!-- invl-header-middle -->
-    <div class="invl-header-middle">
+<header class="invl-header">
+    <?=$this->load->view('site/default/navbar',[],TRUE);?>
 
+    <div class="header-page" style="background-image: url('public/images/bg-contato.jpg');">
         <div class="container">
-            <?=$this->load->view('site/default/navbar',[],TRUE);?>
-        </div>
-        <!-- invl-header-middle-image -->
-        <div class="invl-header-middle-image">
-            <div class="invl-header-middle-image-overlay">
-                <div class="inner-overlay">
-                    <div class="container">
-                        <div class="invl-header-content text-center">
-                            <h1>Fale Conosco</h1>
-                            <p>Entre em contato conosco, retire dúvidas e obtenha suporte.</p>
-                        </div>
+            <div class="header-page-content">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <h1>Fale Conosco</h1>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+      
 </header>

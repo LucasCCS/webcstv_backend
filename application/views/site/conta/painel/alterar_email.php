@@ -33,8 +33,10 @@
                         <div class="col-12 col-lg-6">
                             <input type="text" class="form-control input-lg" name="r_email" placeholder="Repita o E-mail">
                         </div>
-                    </div>   
-                    <input type="submit" name="mudar_email_conta" class="btn btn-info" value="Salvar">
+                    </div>  
+                    <div class="text-right">
+                        <input type="submit" name="mudar_email_conta" class="btn btn-primary btn-lg" value="Salvar">
+                    </div> 
                 </form>
                 <?php } ?>
             </div>

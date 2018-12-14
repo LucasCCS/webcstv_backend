@@ -34,7 +34,9 @@
                             <input type="password" class="form-control input-lg" name="r_senha" placeholder="Repita a Senha">
                         </div>
                     </div>   
-                    <input type="submit" name="mudar_senha_conta" class="btn btn-info" value="Salvar">
+                    <div class="text-right">
+                        <input type="submit" name="mudar_senha_conta" class="btn btn-primary btn-lg" value="Salvar">
+                    </div>
                 </form>
                 <?php } ?>
             </div>

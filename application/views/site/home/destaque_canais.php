@@ -7,7 +7,7 @@
                     <h2>Acesso aos<br>melhores canais</h2>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-4 text-center">
-                    <a class="btn btn-default btn-block" href="#">Teste Gratuito</a>
+                    <a class="btn btn-default btn-block" href="<?=base_url();?>planos">Teste Gratuito</a>
                     <small>Teste e comprove toda a qualidade!</small>
                 </div>
             </div>

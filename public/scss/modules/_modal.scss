@@ -1,6 +1,31 @@
 .modal-content {
     border: none;
     box-shadow: 3px 3px 30px rgba(0, 0, 0, .3);
+    .tab-content {
+        padding-bottom: 10px;
+    }
+    .nav-tabs {
+        border-bottom: none;
+        .nav-item {
+            .nav-link {
+                background-color: #fff;
+                font-family: 'Ubuntu Medium';
+                border-color: #fff;
+                color: rgba(0, 0, 0, .6);
+                font-size: 18px;
+                opacity: .7;
+            }
+            .active {
+                background-color: #ff9820;
+                border-color: #ff9820;
+                color: #fff;
+                opacity: 1;
+            }
+        }
+        .nav-item+.nav-item {
+            margin-left: 5px;
+        }
+    }
 }
 
 .modal-title {

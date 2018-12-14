@@ -1,11 +1,3 @@
-    <!-- invl-footer -->
-    <footer>
-        <div class="container">
-            <div class="text-center">
-                <small class="text-muted">2018 SeuCS - todos os direitos reservados.</small>
-            </div>
-        </div>
-    </footer>
     <!-- modal -->
     <?=$this->load->view('site/default/modal',[],TRUE);?>
     <!-- scripts -->
@@ -16,7 +8,6 @@
     <script src="<?=base_url();?>public/js/jquery.mask.js"></script>
     <script src="<?=base_url();?>public/js/bootstrap-notify.min.js"></script>
     <script src="<?=base_url();?>public/js/cadastro.js"></script>
-    <script src="<?=base_url();?>public/js/login.js"></script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@
     <link href="<?=base_url();?>public/admin/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
     <link href="<?=base_url();?>public/admin/plugins/c3-master/c3.min.css" rel="stylesheet">
     <link href="<?=base_url();?>public/admin/css/style.css" rel="stylesheet">
-    <link href="<?=base_url();?>public/admin/css/colors/blue.css" id="theme" rel="stylesheet">
+    <link href="<?=base_url();?>public/admin/css/colors/orange.css" id="theme" rel="stylesheet">
     <link href="<?=base_url();?>public/admin/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
     <link href="<?=base_url();?>public/admin/js/ui/trumbowyg.css" rel="stylesheet"> 
 </head>

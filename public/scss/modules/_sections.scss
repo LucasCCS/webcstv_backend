@@ -1,5 +1,6 @@
 // invl-plans
-.invl-plans {
+.invl-plans,
+.invl-plans-iptv {
     margin-top: 15px;
     // invl-plans-header
     .invl-plans-header {
@@ -15,6 +16,38 @@
             font-family: 'Ubuntu Light Italic';
             font-size: 30px;
             margin-top: -10px;
+        }
+    }
+    // invl-plans-nav
+    .invl-plans-nav {
+        margin-top: 50px;
+        // invl-plans-nav-list
+        .invl-plans-nav-list {
+            background-color: #e9e9e9;
+            border-radius: 30px;
+            padding: 5px;
+            list-style: none;
+            .nav-item {
+                display: inline-block;
+                width: 32.65%;
+                text-align: center;
+                .nav-link {
+                    font-family: 'Ubuntu Medium';
+                    color: #ff8e0b;
+                    &:hover {
+                        background-color: darken(#e9e9e9, 10%);
+                        border-radius: 40px;
+                    }
+                }
+                .nav-link.active {
+                    color: #fff;
+                    background-color: #ff8e0b;
+                    border-radius: 40px;
+                }
+            }
+            .nav-item+.nav-item {
+                margin-left: 1%;
+            }
         }
     }
     // invl-plans-list
@@ -134,7 +167,7 @@
                         list-style: none;
                         padding-left: 0px;
                         // invl-plans-list-item-features-list-item
-                        .invl-plans-list-item-features-list-item {
+                        li {
                             font-family: 'Ubuntu Medium';
                             font-size: 19px;
                             color: #ff8e0b;
@@ -146,6 +179,39 @@
                 }
             }
         }
+    }
+}
+
+.invl-plans-iptv {
+    background-color: #00469e !important;
+    padding: 20px 0px 60px 0px;
+    .invl-plans-header {
+        color: #fff;
+    }
+    .invl-plans-list-item-body {
+        background-color: #fff !important;
+    }
+    .invl-plans-list-item-header {
+        background-color: #1062c9 !important;
+    }
+    .invl-plans-list-item-price {
+        .new-price {
+            h4 {
+                color: #1062c9 !important;
+            }
+        }
+    }
+    .invl-plans-list-item-features-list {
+        li {
+            color: #1062c9 !important;
+        }
+    }
+    .nav-item .nav-link {
+        color: #1062c9 !important;
+    }
+    .nav-item .nav-link.active {
+        color: #fff !important;
+        background-color: #1062c9 !important;
     }
 }
 
@@ -378,5 +444,69 @@
         padding: 20px 0px 5px 0px;
         background-color: #111111;
         color: rgba(255, 255, 255, .35);
+    }
+}
+
+// invl-faq
+.invl-faq {
+    .invl-faq-content {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        .invl-faq-list {
+            .invl-faq-list-item {
+                position: relative;
+                list-style: none;
+                padding: 30px;
+                cursor: pointer;
+                border-bottom: 1px solid rgba(0, 0, 0, .2);
+                h3 {
+                    font-size: 2rem;
+                }
+                &:after {
+                    content: '\f107';
+                    font-family: 'Font Awesome\ 5 Free';
+                    font-weight: 900;
+                    position: absolute;
+                    font-size: 30px;
+                    color: rgba(0, 0, 0, .5);
+                    right: 0;
+                    top: 0;
+                    margin-top: 40px;
+                }
+                &:last-of-type {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+.invl-cadastro {
+    // invl-cadastro-form
+    .invl-cadastro-form {
+        margin-top: 30%;
+        font-family: 'Ubuntu Regular';
+        h4 {
+            small {
+                span {
+                    opacity: .8;
+                    font-size: 14px;
+                    a {
+                        color: #000;
+                        opacity: .8;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    // invl-cadastro-imagem
+    .invl-cadastro-imagem {
+        height: 100vh;
+        background-color: #fff;
+        background-image: url('../images/header-bg-01.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
     }
 }

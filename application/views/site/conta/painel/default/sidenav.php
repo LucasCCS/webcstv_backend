@@ -38,21 +38,6 @@
                     </div>
                 </li>
                 <li> 
-                    <a class="waves-effect waves-dark" data-toggle="collapse" href="#menuAssinatura"  aria-expanded="false"><i class="mdi mdi-file-outline"></i><span class="hide-menu">Assinatura</span></a>
-                    <div class="collapse multi-collapse" id="menuAssinatura">
-                        <nav>
-                            <ul>
-                                <li> 
-                                    <a class="waves-effect waves-dark" href="<?=base_url();?>conta/dados/assinatura" aria-expanded="false"><i class="mdi mdi-file-document"></i> <span class="hide-menu">Dados da Assinatura</span></a>
-                                </li>
-                                <li> 
-                                    <a class="waves-effect waves-dark" href="<?=base_url();?>conta/alterar/operadora" aria-expanded="false"><i class="mdi mdi-swap-horizontal"></i> <span class="hide-menu">Alterar Operadora</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </li>
-                <li> 
                     <a class="waves-effect waves-dark" data-toggle="collapse" href="#menuSuporte"  aria-expanded="false"><i class="mdi mdi-help-circle-outline"></i><span class="hide-menu">Suporte</span></a>
                     <div class="collapse multi-collapse" id="menuSuporte">
                         <nav>

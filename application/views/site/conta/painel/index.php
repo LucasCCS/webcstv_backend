@@ -2,31 +2,16 @@
 
 <div class="row">
     <!-- clientes ativos -->
-    <div class="col-sm-12 col-md-12 col-lg-6">
-        <div class="card card-inverse card-info mb-3 text-center">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card card-inverse card-primary mb-3 text-center">
             <div class="card-block">
-                <h1><i class="mdi mdi-calendar-clock"></i></h1><p> 
+                <h1 style="color: #fff;"><i class="mdi mdi-calendar-clock"></i></h1><p> 
                 <?php
                     $date1 = time();
                     $date2 = $this->cliente_servidor_principal['data_premio'];
                     $tempo = $date2 - $date1;
                     echo round($tempo / (60 * 60 * 24)).' Dia(s) Restante(s)';
                 ?></p>
-            </div>
-        </div>
-    </div>
-    <!-- clientes em teste -->
-    <div class="col-sm-12 col-md-12 col-lg-6">
-        <div class="card card-inverse card-info mb-3 text-center">
-            <div class="card-block">
-            <h1><i class="mdi mdi-television"></i></h1><p> 
-            <?php
-                if($this->cliente['tipo'] == PLANO_NET) {
-                    echo '1';
-                } else {
-                    if(isset($cliente_operadoras)) echo count($cliente_operadoras);
-                }                                             
-            ?> Operadora(s)</p>
             </div>
         </div>
     </div>
@@ -74,53 +59,6 @@
                                     <tr>
                                         <td>Mensalidade:</td>
                                         <td><?=$this->cliente['valor'];?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Operadora(s):</td>
-                                        <td>
-                                            <?php
-                                                if($this->cliente['tipo'] == PLANO_NET) {
-                                                    echo $this->cliente['titulo'];
-                                                } else {
-                                                    if (isset($cliente_operadoras)) {
-                                                        foreach($cliente_operadoras as $key) {
-                                                            echo $key->titulo.' ';
-                                                        }
-                                                    }
-                                                }                                             
-                                            ?>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" class="text-center"><strong>Dados de Conexão</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>URL(s):</td>
-                                        <td>
-                                            <?php
-                                                if (isset($cliente_operadoras)) {
-                                                    foreach($cliente_operadoras as $key) {
-                                                        echo '<span class="badge badge-default">'.$key->titulo.'</span>: '.$key->url.'<br>';
-                                                    }
-                                                }
-                                            ?>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Porta(s):</td>
-                                        <td>
-                                            <?php
-                                                if (isset($cliente_operadoras)) {
-                                                    foreach($cliente_operadoras as $key) {
-                                                        echo '<span class="badge badge-default">'.$key->titulo.'</span>: '.$key->porta.'<br>';
-                                                    }
-                                                }
-                                            ?>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Chave DES:</td>
-                                        <td><?=$this->cliente['chave_des'];?></td>
                                     </tr>
                                 </tbody>
                             </table>

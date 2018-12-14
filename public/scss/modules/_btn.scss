@@ -12,6 +12,43 @@
     }
 }
 
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: #fff;
+    background-color: #ff9820;
+    border-color: #ff9820;
+}
+
+.btn-info {
+    background-color: #1062c9;
+    border-color: #1062c9;
+    &:hover {
+        background-color: darken(#1062c9, 5%) !important;
+        border-color: darken(#1062c9, 5%);
+    }
+}
+
+.btn-info.disabled,
+.btn-info:disabled {
+    color: #fff;
+    background-color: #1062c9;
+    border-color: #1062c9;
+}
+
+// invl-cadastro-form
+.invl-cadastro-form {
+    // btn-cadastro
+    .btn-cadastro {
+        background-color: transparent;
+        color: #ff9820;
+        &:hover {
+            background-color: darken(#ff9820, 5%) !important;
+            border-color: darken(#ff9820, 5%);
+            color: #fff;
+        }
+    }
+}
+
 .btn-default {
     background-color: #262626;
     border-color: #262626;

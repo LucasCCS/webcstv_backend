@@ -18,6 +18,8 @@
                         echo '<div class="alert alert-success">'.$this->session->flashdata('codigo_sucesso').'</div>';
                     } 
                 ?> 
+                <div class="invl-plans"> 
+                <div class="invl-plans-list"> 
                 <div class="row">                  
                     
                     <!-- <div class="col-sm-12 col-md-12 col-lg-8 mt-5">
@@ -48,27 +50,40 @@
                         </div>
                     </div> -->
                     <?php
-                        $valor_dia = intval($this->cliente['valor']) / intval($this->cliente['dias']);
+                        // $valor_dia = intval($this->cliente['valor']) / intval($this->cliente['dias']);
                         $col = 12 / (1+count($sub_planos));
                     ?>
-                    <div  class="col-12 col-sm-12 col-md-12 col-lg-<?=$col;?>">
+                    
+                    <div class="col-sm-12 col-md-12 col-lg-<?=$col;?>">
                         <div class="invl-plans-list-item">
                             <div class="invl-plans-list-item-header">
-                                <div class="invl-plans-list-item-header-title">
-                                    <h2><?=$this->cliente['dias'];?> dia(s)</h2>
-                                </div>
-                                <div class="invl-plans-list-item-header-price">
-                                    <h3><small>R$</small> <?=$this->cliente['valor'];?></h3>
-                                </div>
+                                <h4><?=$this->cliente['titulo'];?></h4>
+                                <?php
+                                    if(!empty($this->cliente['subtitulo'])) {
+                                        echo '<p>'.$this->cliente['subtitulo'].'</p>';
+                                    }
+                                ?> 
                             </div>
-                            <div class="invl-plans-list-item-content">
-                                <ul class="invl-plans-list-item-content-list">
-                                    <li><strong>R$ <?=number_format($valor_dia,2);?> centavo(s)</strong> por dia</li>
-                                    <?=$this->cliente['descricao'];?>
-                                    <li>
-                                        <a class="btn btn-secondary btn-lg" href="#" data-toggle="modal" data-target="#plano-default" >Comprar</a>
-                                    </li>
-                                </ul>
+                            <div class="invl-plans-list-item-body">
+                                <div class="invl-plans-list-item-price">
+                                    <span class="old-price">de R$ <?=$this->cliente['subtitulo'];?></span>
+                                    <div class="new-price">
+                                        <?php
+                                            $valor = explode(',',$this->cliente['valor']); 
+                                        ?>
+                                        <h4><?=$valor[0];?><span>,<?=$valor[1]?></span></h4>
+                                        <p>por mês</p>
+                                    </div>
+                                </div>
+                                <div class="invl-plans-list-item-action text-center">
+                                    <a class="btn btn-primary btn-plans btn-block" href="#"  data-toggle="modal" data-target="#plano-default">Comprar</a>
+                                    <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
+                                </div>
+                                <div class="invl-plans-list-item-features">
+                                    <ul class="invl-plans-list-item-features-list">
+                                        <?=$this->cliente['descricao'];?>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -166,32 +181,45 @@
                         </div>
                     </div>
                     <?php
-                        if (isset($sub_planos)) {
-                            foreach($sub_planos as $key) {
+                        if (isset($sub_planos)):
+                            foreach($sub_planos as $key):
                                 $valor_dia_sub = intval($key->valor) / intval($key->dias);
-                                echo '<div  class="col-12 col-sm-12 col-md-12 col-lg-'.$col.'">
+                    ?>    
+                            <div class="col-sm-12 col-md-6 col-lg-<?=$col;?>">
                                 <div class="invl-plans-list-item">
                                     <div class="invl-plans-list-item-header">
-                                        <div class="invl-plans-list-item-header-title">
-                                            <h2>'.$key->dias.' dia(s)</h2>
-                                        </div>
-                                        <div class="invl-plans-list-item-header-price">
-                                            <h3><small>R$</small>'.$key->valor.'</h3>
-                                        </div>
+                                        <h4><?=$key->titulo;?></h4>
+                                        <?php
+                                            if(!empty($key->subtitulo)) {
+                                                echo '<p>'.$key->subtitulo.'</p>';
+                                            }
+                                        ?> 
                                     </div>
-                                    <div class="invl-plans-list-item-content">
-                                        <ul class="invl-plans-list-item-content-list">
-                                            <li><strong>R$ '.number_format($valor_dia_sub,2).' centavo(s)</strong> por dia</li>
-                                            '.$key->descricao.'
-                                            <li>
-                                                <a class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#plano-'.$key->id_sub_plano.'"  href="#">Comprar</a>
-                                            </li>
-                                        </ul>
+                                    <div class="invl-plans-list-item-body">
+                                        <div class="invl-plans-list-item-price">
+                                            <span class="old-price">de R$ <?=$key->valor_antigo;?></span>
+                                            <div class="new-price">
+                                                <?php
+                                                    $valor = explode(',',$key->valor); 
+                                                ?>
+                                                <h4><?=$valor[0];?><span>,<?=$valor[1]?></span></h4>
+                                                <p>por trimestre</p>
+                                            </div>
+                                        </div>
+                                        <div class="invl-plans-list-item-action text-center">
+                                            <a class="btn btn-primary btn-plans btn-block" href="#" data-toggle="modal" data-target="#plano-<?=$key->id_sub_plano?>">Comprar</a>
+                                            <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
+                                        </div>
+                                        <div class="invl-plans-list-item-features">
+                                            <ul class="invl-plans-list-item-features-list">
+                                                <?=$key->descricao;?>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>';
+                            </div>
 
-                    ?>
+                    
                     <!-- modal - pagamento (loop) -->
                     <div class="modal mt-5" tabindex="-1" role="dialog" id="plano-<?=$key->id_sub_plano?>">
                         <div class="modal-dialog modal-lg" role="document">
@@ -286,8 +314,7 @@
                         </div>
                     </div>
                     <?php
-                            }
-                        }
+                        endforeach; endif;
                         
                     ?>
                     <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-4">
@@ -308,6 +335,8 @@
                         </div>
                     </div> -->
 
+                </div>
+                </div>
                 </div>
                 
             </div>

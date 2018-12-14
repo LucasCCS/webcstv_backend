@@ -14,6 +14,12 @@
             if (isset($options['id_plano'])) {
                 $this->db->where('cms_sub_planos.id_plano',$options['id_plano']);
             }
+            if (isset($options['periodicidade'])) {
+                $this->db->where('cms_sub_planos.periodicidade',$options['periodicidade']);
+            }
+            if (isset($options['plano_tipo'])) {
+                $this->db->where('cms_planos.plano_tipo',$options['plano_tipo']);
+            }
             $this->db->join('cms_planos','cms_planos.id_plano = cms_sub_planos.id_plano');
             $query = $this->db->get('cms_sub_planos');
             if ($query->num_rows() > 0) {

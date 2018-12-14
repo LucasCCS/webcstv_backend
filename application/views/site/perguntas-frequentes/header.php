@@ -3,7 +3,7 @@
 <header class="invl-header">
     <?=$this->load->view('site/default/navbar',[],TRUE);?>
 
-    <div class="header-page" style="background-image: url('public/images/header-bg-01.jpg');">
+    <div class="header-page" style="background-image: url('public/images/bg-duvidas.jpg'); background-position: center;">
         <div class="container">
             <div class="header-page-content">
                 <div class="row">

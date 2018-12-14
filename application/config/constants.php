@@ -120,3 +120,8 @@ define('PLANO_NET',1);
 define('PLANO_TIPO_CS',0);
 define('PLANO_TIPO_IPTV',1);
 
+// Plano periodicidade
+define('PERIODICIDADE_MENSAL',0);
+define('PERIODICIDADE_TRIMESTRAL',1);
+define('PERIODICIDADE_SEMESTRAL',2);
+

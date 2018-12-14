@@ -39,7 +39,6 @@ class Site extends CI_Controller {
 		 */
 		if($this->auth->checkCustomerAuth()) {
 			if(empty($this->cliente)) $this->cliente = $this->session->userdata('customer_painel_data');
-			$this->cliente_servidor_principal = $this->servidor_users->getUserServidor(['usuario' => $this->cliente['usuario']]);
 		}
 		
 	}
@@ -76,28 +75,22 @@ class Site extends CI_Controller {
 		}
 	}
 	/**
-	 * login
+	 * post_login
 	 */
-	public function login()
+	public function post_login()
 	{
-		header('Content-type: application/json');
 		if (isset($_POST)) {
 			$login = [
 				'email' => $_POST['email'],
 				'senha' => $_POST['senha'],
 			];
 			if ($this->auth->loginCustomer($login)) {
-				$data = [
-					'status' => true,
-				];
+				redirect('conta/principal');
 			} else {
-				$data = [
-					'status' => false,
-					'alert' => '<div class="alert alert-danger">Verifique os dados informados e tente novamente!</div>'
-				];
+				$this->session->set_flashdata('validation_errors','Verifique os dados informados e tente novamente!');
+				redirect('conta/entrar');
 			}
 		}
-		echo json_encode($data);
 	}
 	/**
 	 * recovery
@@ -364,21 +357,23 @@ class Site extends CI_Controller {
 		]);	
 	}	
 	/**
-	 * conta_teste_net
+	 * gerar_teste
 	 */
-	public function conta_teste_net($param)
+	public function gerar_teste($param)
 	{
-		if ($this->cliente['codigo_teste_net'] == $param) {
+		$cliente_atualizado = $this->clientes->getClientes(['id_cliente' => $this->cliente['id_cliente']]);
+		// if ($cliente_atualizado['codigo_teste'] == $param) {
 			$this->clientes->updateClientes([
 				'id_cliente' => $this->cliente['id_cliente'],
-				'codigo_teste_net' => ''
+				'codigo_teste' => ''
 			]);
-			$this->load->view('site/conta_gerar_teste_net',[
-				'titulo' => ['Gerar Teste Net',$this->site['titulo']],
+			
+			$this->load->view('site/conta_gerar_teste',[
+				'titulo' => ['Gerar Teste',$this->site['titulo']],
 			]);	
-		} else {
-			redirect('');
-		}
+		// } else {
+			// redirect('');
+		// }
 	}
 	/**
 	 * envio_comprovante_pagamento
@@ -426,8 +421,12 @@ class Site extends CI_Controller {
 
 		} else {
 			$this->load->view('site/home',[
-				'planos_cs' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_CS]),
-				'planos_iptv' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_IPTV]),
+				'planos_cs_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_MENSAL]),
+				'planos_cs_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
+				'planos_cs_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
+				'planos_iptv_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_MENSAL]),
+				'planos_iptv_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
+				'planos_iptv_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
 				'faq' => $this->faq->getFaq(),
 				'titulo' => [$this->site['titulo'],$this->site['slogan']],
 			]);
@@ -448,11 +447,9 @@ class Site extends CI_Controller {
 	public function conta()
 	{
 		if($this->cliente['status'] == CLIENTE_INATIVO) redirect('conta/ativacao');
-		if (!$this->auth->checkCustomerAuth()) redirect('');
+		// if (!$this->auth->checkCustomerAuth()) redirect('');
 		$this->load->view('site/conta/painel/index',[
-			'titulo' => ['Minha Conta',$this->site['titulo']],
-			'cliente_operadoras' => $this->cliente_operadoras->getClienteOperadoras(['id_cliente' => $this->cliente['id_cliente']])
-			
+			'titulo' => ['Minha Conta',$this->site['titulo']],	
 		]);
 	}
 	/**
@@ -461,7 +458,12 @@ class Site extends CI_Controller {
 	public function planos()
 	{
 		$this->load->view('site/planos',[
-			'planos' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_CS]),
+			'planos_cs_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_MENSAL]),
+			'planos_cs_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
+			'planos_cs_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
+			'planos_iptv_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_MENSAL]),
+			'planos_iptv_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
+			'planos_iptv_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
 			'titulo' => ['Planos CardSharing',$this->site['titulo']],
 		]);
 	}
@@ -491,10 +493,24 @@ class Site extends CI_Controller {
 		if ($this->auth->checkCustomerAuth() && $this->cliente['status'] == CLIENTE_INATIVO) redirect('conta/ativacao');
 		else if($this->auth->checkCustomerAuth() && $this->cliente['status'] != CLIENTE_INATIVO) redirect('');
 		$this->load->view('site/cadastro',[
-			'planos_cs' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_CS]),
-			'planos_iptv' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_IPTV]),
-			'operadoras' => $this->operadoras->getOperadoras(),
-			'titulo' => ['Experimente por 24 horas gratuitamente',$this->site['titulo']],
+			'titulo' => ['Experimente gratuitamente',$this->site['titulo']],
+			'planos_cs_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_MENSAL]),
+			'planos_cs_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
+			'planos_cs_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
+			'planos_iptv_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_MENSAL]),
+			'planos_iptv_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
+			'planos_iptv_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
+		]);
+	}
+	/**
+	 * login
+	 */
+	public function login()
+	{	
+		if ($this->auth->checkCustomerAuth() && $this->cliente['status'] == CLIENTE_INATIVO) redirect('conta/ativacao');
+		else if($this->auth->checkCustomerAuth() && $this->cliente['status'] != CLIENTE_INATIVO) redirect('');
+		$this->load->view('site/login',[
+			'titulo' => ['Central do Cliente',$this->site['titulo']],
 		]);
 	}
 	/**
@@ -502,39 +518,23 @@ class Site extends CI_Controller {
 	 */
 	public function post_cadastro()
 	{
-		header('Content-type: application/json');
 		if (isset($_POST)) {
 			$this->form_validation->set_rules('nome','Nome','required');
 			$this->form_validation->set_rules('telefone','Telefone Celular','required|is_unique[cms_clientes.telefone]');
 			$this->form_validation->set_rules('email','E-mail','required|is_unique[cms_clientes.email]|valid_email');
 			$this->form_validation->set_rules('senha','Senha','required|min_length[8]');
-			$this->form_validation->set_rules('r_senha','Repita sua Senha','required|min_length[8]|matches[senha]');
 			if($this->form_validation->run() == TRUE) {
 				$post = $this->input->post();
 				$codigo_ativacao = intval( "0" . rand(1,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9));
 				$user_servidor = strtolower(substr($post['nome'],0,4)).rand(1,100) . rand(1,100); 
 				$pass_servidor = intval( "0" . rand(1,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9));
-				$checkUserTestExists = $this->servidor_users->checkUserTestExists(['user' => $user_servidor]);
-				if(!$checkUserTestExists) {
-					self::servidor_cadastro_usuario_teste($post,$codigo_ativacao,$user_servidor,$pass_servidor);
-
-				} else {
-					$user_servidor = strtolower(substr($post['nome'],0,4)).rand(1,100) . rand(1,100); 
-					$pass_servidor = intval( "0" . rand(1,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9));
-					self::servidor_cadastro_usuario_teste($post,$codigo_ativacao,$user_servidor,$pass_servidor);
-				}
-				$data = [
-					'status' => true,
-					'redirect' => base_url('conta/ativacao')	
-				];	
+				self::cadastro_usuario($post,$codigo_ativacao,$user_servidor,$pass_servidor);
+				redirect('conta/ativacao');
 			} else {
-				$data = [
-					'status' => false,
-					'errors' => validation_errors()
-				];
+				$this->session->set_flashdata('validation_errors',validation_errors());
+				redirect('cadastro');
 			}
 		}
-		echo json_encode($data);
 	}
 	/**
 	 * cadastro_ativacao
@@ -555,52 +555,28 @@ class Site extends CI_Controller {
 					]);
 					$this->session->set_userdata('customer_painel_data', $this->cliente);
 
-					// $cliente_atualizado = $this->clientes->getClientes(['id_cliente' => $this->cliente['id_cliente']])
+					$cliente_atualizado = $this->clientes->getClientes(['id_cliente' => $this->cliente['id_cliente']]);
 					// cliente_servidor
-					$cliente_servidor = $this->servidor_users->getUserTeste(['id_user_servidor' => $this->cliente['id_user_servidor']]);
-					if(!empty($this->cliente['codigo_teste_net'])) {
-						// send_mail
-						$this->send_mail(
-							$this->site['email_formularios'],
-							$this->site['titulo'],
-							$this->site['email_formularios'],
-							$this->site['titulo'],
-							$this->cliente['email'],
-							$this->cliente['nome'],
-							'Conta Ativada com Sucesso',
-							$this->load->view('mail/templates/ativacao_net_template',[
-								'cliente' => $this->cliente,
-								'site_url' => base_url(),
-								'site' => $this->site,
-								'cliente_servidor' => $cliente_servidor,
-							],TRUE)
-						);
-						$this->session->set_flashdata('no_redirect','true');
-						$this->session->set_flashdata('codigo_sucesso','sucesso');
-						redirect('conta/ativacao');
-					} else {
-						$operadoras = $this->cliente_operadoras->getClienteOperadoras(['id_cliente' => $this->cliente['id_cliente']]);
-						// send_mail
-						$this->send_mail(
-							$this->site['email_formularios'],
-							$this->site['titulo'],
-							$this->site['email_formularios'],
-							$this->site['titulo'],
-							$this->cliente['email'],
-							$this->cliente['nome'],
-							'Conta Ativada com Sucesso',
-							$this->load->view('mail/templates/ativacao_template',[
-								'cliente' => $this->cliente,
-								'site_url' => base_url(),
-								'site' => $this->site,
-								'cliente_servidor' => $cliente_servidor,
-								'operadoras' => $operadoras
-							],TRUE)
-						);
-						$this->session->set_flashdata('no_redirect','true');
-						$this->session->set_flashdata('codigo_sucesso','sucesso');
-						redirect('conta/ativacao');
-					}
+					
+					// send_mail
+					$this->send_mail(
+						$this->site['email_formularios'],
+						$this->site['titulo'],
+						$this->site['email_formularios'],
+						$this->site['titulo'],
+						$this->cliente['email'],
+						$this->cliente['nome'],
+						'Conta Ativada com Sucesso',
+						$this->load->view('mail/templates/ativacao_net_template',[
+							'cliente' => $this->cliente,
+							'site_url' => base_url(),
+							'teste_url' => base_url().'conta/gerar/teste/'.$this->cliente['codigo_teste'],
+							'site' => $this->site
+						],TRUE)
+					);
+					$this->session->set_flashdata('no_redirect','true');
+					$this->session->set_flashdata('codigo_sucesso','sucesso');
+					redirect('conta/ativacao');			
 					
 				} else {
 					$this->session->set_flashdata('codigo_error','O código de ativação informado não é valido, verifique-o e tente novamente!');
@@ -653,85 +629,33 @@ class Site extends CI_Controller {
 		echo json_encode($data);		
 	}
 	/**
-	 * servidor_cadastro_usuario_teste
+	 * cadastro_usuario
 	 */
-	function servidor_cadastro_usuario_teste($post,$codigo_ativacao,$user_servidor,$pass_servidor) {	
+	function cadastro_usuario($post,$codigo_ativacao,$user_servidor,$pass_servidor) {	
 		// operadoras
 		if(isset($post['operadora'])) $operadoras = $post['operadora'];
 		$servidor_operadoras = array();
 		$plano = $this->planos->getPlanos(['id_plano' => $post['id_plano']]);
 		$nome_sobrenome = explode(' ',$post['nome']);
 		if(!isset($nome_sobrenome[1])) $nome_sobrenome[1] = "";
-		if($plano['tipo'] != PLANO_NET) {
-			foreach($operadoras as $key => $value) {
-				// getOperadoras
-				$servidor_operadora = $this->operadoras->getOperadoras(['id_operadora' => $operadoras[$key]]);
-				$servidor_operadoras[] = '['.$servidor_operadora['perfil'].']';
-			}
-			$t = implode('',$servidor_operadoras);
-		} else {
-			$t = '[net]';
-		}
 
-		// servidor dados
-		$servidor_user_data = [
-			'CadUser' => ADMIN_CADUSER,
-			'nome' => $nome_sobrenome[0],
-			'sobrenome' => $nome_sobrenome[1],
+	
+		$cliente_data = [
+			'nome' => $post['nome'],
 			'usuario' =>$user_servidor,
-			'senha' =>$pass_servidor,
+			'telefone' => $post['telefone'],
 			'email' => $post['email'],
-			'celular' => $post['telefone'],
-			'conexao' => $plano['conexoes'],
-			'perfil' => $t,
-			'data_cadastro' => date('Y-m-d H:i:s',time()),
-			'data_premio' => strtotime(date('Y-m-d H:i:s',strtotime('+1 day'))),
-			'VencEmail' => 'S',
-			'VencSMS' => 'S',
-			'xml' => 'S',
-			'obs' => 'Cadastrado no Site'
+			'id_plano' => $post['id_plano'],
+			'codigo_teste' => md5($post['nome']),
+			'codigo_ativacao' => $codigo_ativacao,
+			'senha' => md5($post['senha'])
 		];
-		$id_user_servidor = $this->servidor_users->insertUserTeste($servidor_user_data);
-		// cliente dados
-		if($plano['tipo'] != PLANO_NET) { 
-			$cliente_data = [
-				'nome' => $post['nome'],
-				'usuario' =>$user_servidor,
-				'telefone' => $post['telefone'],
-				'email' => $post['email'],
-				'id_plano' => $post['id_plano'],
-				'codigo_teste_net' => '',
-				'codigo_ativacao' => $codigo_ativacao,
-				'id_user_servidor' => $id_user_servidor,
-				'senha' => md5($post['senha'])
-			];
-		} else {
-			$cliente_data = [
-				'nome' => $post['nome'],
-				'usuario' =>$user_servidor,
-				'telefone' => $post['telefone'],
-				'email' => $post['email'],
-				'id_plano' => $post['id_plano'],
-				'codigo_teste_net' => md5($post['nome']),
-				'codigo_ativacao' => $codigo_ativacao,
-				'id_user_servidor' => $id_user_servidor,
-				'senha' => md5($post['senha'])
-			];
-		}
+		
 		$id_cliente = $this->clientes->insertClientes($cliente_data);
 		$this->auth->loginCustomer([
 			'email' =>$post['email'],
 			'senha' => $post['senha']
 		]);
-		if($plano['tipo'] != PLANO_NET) { 
-			foreach($operadoras as $key => $value) {
-				// insertClienteOperadoras
-				$this->cliente_operadoras->insertClienteOperadoras([
-					'id_cliente'=> $id_cliente,
-					'id_operadora' => $operadoras[$key]
-				]);
-			}
-		}
 		// send_sms($numero,$campanha,$texto)
 		$telefone = str_replace(' ','',(str_replace('-','',str_replace('(','',str_replace(')','',$post['telefone'])))));
 		self::send_sms($telefone,'Seu código de ativação','O seu código de ativação é: '.$codigo_ativacao.'.');	

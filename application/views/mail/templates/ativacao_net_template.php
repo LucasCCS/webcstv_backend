@@ -24,7 +24,7 @@
         }
         
         .mail-btn {
-            background-color: #0059b0;
+            background-color: #ff9820;
             padding: 20px 30px;
             color: #fff !important;
             text-decoration: none;
@@ -40,7 +40,7 @@
         }
         
         .mail .mail-header {
-            background-color: #0059b0;
+            background-color: #ff9820;
             padding: 20px 50px;
             text-align: center;
             border-top-left-radius: 4px;
@@ -74,7 +74,7 @@
         }
         
         .mail .mail-content h2 span {
-            color: #283dbb;
+            color: #ff9820;
             font-weight: 700;
         }
         
@@ -491,12 +491,12 @@
     </style>
 </head>
 
-<body style="background-color: #f4f4f4; padding: 30px;">
+<body style="background-image: url('<?=base_url();?>public/images/bg-contato.png'); padding: 30px;">
     <div class="container">
         <div class="col-md-4 offset-md-3 offset-lg-12 col-lg-12">
             <div class="mail">
                 <div class="mail-logo text-center">
-                    <img src="<?=base_url();?>public/images/logo-default.png">
+                    <img src="<?=base_url();?>public/images/logo.png">
                 </div>
                 <div class="mail-header">
                     <h3>Conta Ativada com Sucesso</h3>
@@ -511,26 +511,31 @@
                                     <?=$cliente['titulo'];?>
                                 </td>
                             </tr>
+                            <tr>
+                                <th scope="row" class="table-title">Duração do Teste</th>
+                                <td colspan="2">
+                                    hora(s)
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
-                    <small>* O seu teste possui o prazo de validade de 24 horas.</small>
                     <br><br>
-                    <a href="<?=$site_url;?>conta/gerar/teste/net/<?=$cliente['codigo_teste_net'];?>" class="mail-btn">Gerar Teste</a>
+                    <a href="<?=$teste_url;?>" class="mail-btn">Gerar Teste</a>
                     <div style="background-color: #f0f0f0; border:1px solid #ebebeb; padding: 20px; margin-top: 10px;">
                         <strong>Suporte técnico</strong><br>
                         <p>Não deixe de nos adicionar no skype e curtir nossa pagina no facebook, assim você sempre ficara informado sobre o status em geral do servidor. Caso você tenha alguma duvida ou problema, basta nos procurar atraves dos meios de comunicação
                             abaixo:
                         </p>
-                        <p>📧 E-mail:
+                        <p>E-mail:
                             <?=$site['email'];?>
                         </p>
-                        <p>📞 WhatsApp:
+                        <p>WhatsApp:
                             <?=$site['whatsapp'];?>
                         </p>
-                        <p>@ Site:
+                        <p>Site:
                             <?=$site_url;?>
                         </p>
-                        <p>👍 Facebook:
+                        <p>Facebook:
                             <?=$site['facebook'];?>
                         </p>
                     </div>

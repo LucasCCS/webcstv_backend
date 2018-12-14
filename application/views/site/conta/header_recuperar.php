@@ -1,6 +1,6 @@
 <!-- invl-header -->
 <header class="invl-header">
-    <?=$this->load->view('site/default/header-top',[],TRUE);?>
+    <!-- <?=$this->load->view('site/default/header-top',[],TRUE);?> -->
     <div class="invl-header-top-full">
         <div class="container">
             <?=$this->load->view('site/default/navbar',[],TRUE);?>

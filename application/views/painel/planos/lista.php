@@ -41,7 +41,7 @@
                                     <td>'.$key->dias.' dia(s)</td>
                                     <td>'.$key->descricao.'</td>
                                     <td>
-                                      <a href="'.base_url().'painel/plano/editar/'.$key->id_plano.'" class="btn btn-success btn-small"><i class="mdi mdi-pencil"></i></a>
+                                      <a href="'.base_url().'painel/plano/editar/'.$key->id_plano.'" class="btn btn-primary btn-small"><i class="mdi mdi-pencil"></i></a>
                                       <a href="'.base_url().'painel/plano/apagar/'.$key->id_plano.'" class="btn btn-danger btn-small"><i class="mdi mdi-delete"></i></a>
                                       <a data-toggle="collapse" href="#subPlanos-'.$key->id_plano.'" role="button" aria-expanded="false" aria-controls="subPlanos-'.$key->id_plano.'" class="btn btn-secondary btn-small"><i class="mdi mdi-file-tree"></i></a>
                                     </td>
@@ -50,7 +50,7 @@
                                 <tr style="background-color: #eee;" class="collapse" id="subPlanos-'.$key->id_plano.'">
                                     <td colspan="45">
                                       <div class="float-right">Adicionar Sub-Plano 
-                                        <a class="btn btn-success btn-sm" invl-modal-toggle="#adicionar_sub_plano_'.$key->id_plano.'" href="#adicionar_sub_plano_'.$key->id_plano.'">
+                                        <a class="btn btn-primary btn-sm" invl-modal-toggle="#adicionar_sub_plano_'.$key->id_plano.'" href="#adicionar_sub_plano_'.$key->id_plano.'">
                                           <i class="mdi mdi-plus"></i>
                                         </a>
                                       </div>
@@ -60,16 +60,26 @@
                                           </div>
                                           <form method="post" style="margin-top: 10px;">
                                             <input type="hidden" name="id_plano" value="'.$key->id_plano.'">
-                                            <label>Duração</label>
+                                            <label>Duração em dia(s)</label>
                                             <input class="form-control" type="number" name="dias" placeholder="0" required>
-                                            <label>Valor</label>
-                                            <input class="form-control" type="text" name="valor" placeholder="0,00" required>
+                                            <div class="row">
+                                              <div class="col-sm-12 col-md-12 col-lg-6">
+                                                <label>Valor</label>
+                                                <input class="form-control" type="text" name="valor" placeholder="0,00" required>
+                                              </div>
+                                              <div class="col-sm-12 col-md-12 col-lg-6">
+                                                <label>Valor Antigo</label>
+                                                <input class="form-control" type="text" name="valor_antigo" placeholder="0,00" required>
+                                              </div>
+                                            </div>
                                             <label>Código PagSeguro</label>
                                             <input class="form-control" type="text" name="pagseguro_codigo" required>
                                             <label>Código MercadoPago</label>
                                             <input class="form-control" type="text" name="mercadopago_codigo" required>
                                             <small>Código informado ao gerar o plano de pagamento na plataforma.</small><br>
-                                            <input class="btn btn-success" type="submit" name="adicionar_sub_plano" value="Adicionar">
+                                            <div class="text-right">
+                                              <input class="btn btn-primary btn-lg" type="submit" name="adicionar_sub_plano" value="Adicionar">
+                                            </div>
                                             </form>
                                       </div>
                                       ';

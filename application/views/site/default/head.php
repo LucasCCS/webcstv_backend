@@ -11,5 +11,5 @@
     <title><?=$titulo[0];?> | <?=$titulo[1];?></title>
 </head>
 
-<body>
+<body class="<?php if(isset($body_class)): echo $body_class; endif;?>">
 <?=$this->load->view('site/default/modal',[],TRUE);?>

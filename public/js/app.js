@@ -1,7 +1,7 @@
 $(function() {
     // .carousel
     $('.carousel').carousel('cycle', {
-        interval: 2000
+        interval: 500
     });
 
     // [invl-toggle-menu]

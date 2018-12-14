@@ -222,15 +222,13 @@ class Painel extends CI_Controller {
 		if (isset($_POST['novo_plano'])) {
 			$this->form_validation->set_rules('titulo','Título','required');
 			$this->form_validation->set_rules('valor','Valor','required');
+			$this->form_validation->set_rules('valor_antigo','Valor Antigo','required');
+			$this->form_validation->set_rules('url_teste','Url Gerador de Teste','required');
 			$this->form_validation->set_rules('descricao','Descrição','required');
 			$this->form_validation->set_rules('dias','Duração','required');
-			$this->form_validation->set_rules('tipo','Tipo','required');
 			$this->form_validation->set_rules('plano_tipo','Tipo do Plano','required');
 			$this->form_validation->set_rules('pagseguro_codigo','Código PagSeguro','required');
 			$this->form_validation->set_rules('mercadopago_codigo','Código MercadoPago','required');
-			$this->form_validation->set_rules('operadoras','Número de Operadoras','required');
-			$this->form_validation->set_rules('conexoes','Número de Conexões','required');
-			$this->form_validation->set_rules('chave_des','Chave DES','required');
 			if($this->form_validation->run() == TRUE) {			
 				$data = $this->input->post();
 				unset($data['novo_plano']);
@@ -255,15 +253,13 @@ class Painel extends CI_Controller {
 			if (isset($_POST['editar_plano'])) {
 				$this->form_validation->set_rules('titulo','Título','required');
 				$this->form_validation->set_rules('valor','Valor','required');
-				$this->form_validation->set_rules('tipo','Tipo','required');
+				$this->form_validation->set_rules('valor_antigo','Valor Antigo','required');
+				$this->form_validation->set_rules('url_teste','Url Gerador de Teste','required');
 				$this->form_validation->set_rules('plano_tipo','Tipo do Plano','required');
 				$this->form_validation->set_rules('descricao','Descrição','required');
 				$this->form_validation->set_rules('dias','Duração','required');
 				$this->form_validation->set_rules('pagseguro_codigo','Código PagSeguro','required');
 				$this->form_validation->set_rules('mercadopago_codigo','Código MercadoPago','required');
-				$this->form_validation->set_rules('operadoras','Número de Operadoras','required');
-				$this->form_validation->set_rules('conexoes','Número de Conexões','required');
-				$this->form_validation->set_rules('chave_des','Chave DES','required');
 				if($this->form_validation->run() == TRUE) {			
 					$data = $this->input->post();
 					$data['id_plano'] = $id_plano;

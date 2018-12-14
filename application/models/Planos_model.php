@@ -14,6 +14,9 @@
             if (isset($options['plano_tipo'])) {
                 $this->db->where('plano_tipo',$options['plano_tipo']);
             }
+            if (isset($options['periodicidade'])) {
+                $this->db->where('periodicidade',$options['periodicidade']);
+            }
             $query = $this->db->get('cms_planos');
             if ($query->num_rows() > 0) {
                 if (isset($options['id_plano'])) {

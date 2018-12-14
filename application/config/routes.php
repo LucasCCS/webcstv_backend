@@ -146,9 +146,10 @@ $route['conta/novo/pagamento'] = 'site/conta_novo_pagamento';
 $route['conta/pagamentos/historico'] = 'site/conta_historico_pagamento';
 $route['conta/enviar/comprovante/pagamento']['POST'] = 'site/conta_historico_pagamento';
 $route['conta/guias/instalacao'] = 'site/conta_guia_instalacao';
-$route['conta/gerar/teste/net/(:any)'] = 'site/conta_teste_net/$1';
+$route['conta/gerar/teste/(:any)'] = 'site/gerar_teste/$1';
 $route['conta/ativacao'] = 'site/cadastro_ativacao';
-$route['conta/autenticar'] = 'site/login';
+$route['conta/autenticar'] = 'site/post_login';
+$route['conta/entrar'] = 'site/login';
 $route['conta/sair'] = 'site/logout';
 
 // default
