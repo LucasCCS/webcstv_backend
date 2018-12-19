@@ -52,7 +52,7 @@
                                         </div>
                                     </div>
                                     <div class="invl-plans-list-item-action text-center">
-                                        <a class="btn btn-primary btn-plans btn-block" href="#">Teste Grátis</a>
+                                        <a class="btn btn-primary btn-plans btn-block" href="<?=base_url();?>cadastro" selectPlan="<?=$cs_mensal->id_plano;?>">Teste Grátis</a>
                                         <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
                                     </div>
                                     <div class="invl-plans-list-item-features">
@@ -64,123 +64,6 @@
                             </div>
                         </div>
                         <?php endforeach; endif; ?>
-
-                        <!-- <div class="col-sm-12 col-md-6 col-lg-3">
-                            <div class="invl-plans-list-item destaque">
-                                <div class="invl-plans-list-item-header-destaque">
-                                    A melhor opção
-                                </div>
-                                <div class="invl-plans-list-item-header">
-                                    <h4>Prata</h4>
-                                    <p>Satélite Duplo</p>
-                                </div>
-                                <div class="invl-plans-list-item-body">
-                                    <div class="invl-plans-list-item-price">
-                                        <span class="old-price">de R$ 90,00</span>
-                                        <div class="new-price">
-                                            <h4>60<span>,00</span></h4>
-                                            <p>por mês</p>
-                                        </div>
-                                    </div>
-                                    <div class="invl-plans-list-item-action text-center">
-                                        <a class="btn btn-primary btn-plans btn-block" href="#">Teste Grátis</a>
-                                        <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
-                                    </div>
-                                    <div class="invl-plans-list-item-features">
-                                        <ul class="invl-plans-list-item-features-list">
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                <strong>+200</strong> canais em HD
-                                            </li>
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                <strong><i>Suporte 24 horas</i></strong>
-                                            </li>
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                <strong><i>1</i></strong> operadora
-                                            </li>
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                Servidor dedicado
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>          
-
-                        <div class="col-sm-12 col-md-6 col-lg-3">
-                            <div class="invl-plans-list-item">
-                                <div class="invl-plans-list-item-header">
-                                    <h4>Ouro</h4>
-                                    <p>Satélite Triplo</p>
-                                </div>
-                                <div class="invl-plans-list-item-body">
-                                    <div class="invl-plans-list-item-price">
-                                        <span class="old-price">de R$ 90,00</span>
-                                        <div class="new-price">
-                                            <h4>00<span>,00</span></h4>
-                                            <p>por mês</p>
-                                        </div>
-                                    </div>
-                                    <div class="invl-plans-list-item-action text-center">
-                                        <button class="btn btn-primary btn-plans btn-block" disabled>Indisponível</button>
-                                        <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
-                                    </div>
-                                    <div class="invl-plans-list-item-features">
-                                        <ul class="invl-plans-list-item-features-list">
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                <strong>+200</strong> canais em HD
-                                            </li>
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                <strong><i>Suporte 24 horas</i></strong>
-                                            </li>
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                <strong><i>1</i></strong> operadora
-                                            </li>
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                Servidor dedicado
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-3">
-                            <div class="invl-plans-list-item">
-                                <div class="invl-plans-list-item-header">
-                                    <h4>Plano Net</h4>
-                                </div>
-                                <div class="invl-plans-list-item-body">
-                                    <div class="invl-plans-list-item-price">
-                                        <span class="old-price">de R$ 90,00</span>
-                                        <div class="new-price">
-                                            <h4>60<span>,00</span></h4>
-                                            <p>por mês</p>
-                                        </div>
-                                    </div>
-                                    <div class="invl-plans-list-item-action text-center">
-                                        <a class="btn btn-primary btn-plans btn-block" href="#">Teste Grátis</a>
-                                        <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
-                                    </div>
-                                    <div class="invl-plans-list-item-features">
-                                        <ul class="invl-plans-list-item-features-list">
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                <strong>+200</strong> canais em HD
-                                            </li>
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                <strong><i>Suporte 24 horas</i></strong>
-                                            </li>
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                <strong><i>1</i></strong> operadora
-                                            </li>
-                                            <li class="invl-plans-list-item-features-list-item">
-                                                Servidor dedicado
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
                     </div>
                 </div>
             </div>
@@ -213,7 +96,7 @@
                                         </div>
                                     </div>
                                     <div class="invl-plans-list-item-action text-center">
-                                        <a class="btn btn-primary btn-plans btn-block" href="#">Teste Grátis</a>
+                                        <a class="btn btn-primary btn-plans btn-block" href="<?=base_url();?>cadastro" selectPlan="<?=$cs_trimestral->id_plano;?>" selectPlanPer="<?=$cs_trimestral->id_sub_plano;?>">Teste Grátis</a>
                                         <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
                                     </div>
                                     <div class="invl-plans-list-item-features">
@@ -257,7 +140,7 @@
                                         </div>
                                     </div>
                                     <div class="invl-plans-list-item-action text-center">
-                                        <a class="btn btn-primary btn-plans btn-block" href="#">Teste Grátis</a>
+                                        <a class="btn btn-primary btn-plans btn-block" href="<?=base_url();?>cadastro" selectPlan="<?=$cs_semestral->id_plano;?>" selectPlanPer="<?=$cs_semestral->id_sub_plano;?>">Teste Grátis</a>
                                         <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
                                     </div>
                                     <div class="invl-plans-list-item-features">

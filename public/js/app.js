@@ -59,6 +59,16 @@ $(function() {
             // instead of a settings object
         ]
     });
+    // ----------------------------------------------selectPlan---------------------------------------------
+    $('[selectPlan]').on('click', function() {
+        var planId = $(this).attr('selectPlan'),
+            planPeriodo = $(this).attr('selectPlanPer');
+        $('[name="id_plano"]').val(planId);
+        $('[name="id_subplano"]').val(planPeriodo);
+        var data = { id_plano: planId, id_subplano: planPeriodo };
+        sessionStorage.setItem('plan', JSON.stringify(data));
+        $('#cplanosModal').modal('hide');
+    });
     // ----------------------------------------------setFixedMenu---------------------------------------------
     setFixedMenu();
     $(window).scroll(function(event) {

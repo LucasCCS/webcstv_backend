@@ -359,10 +359,10 @@ class Site extends CI_Controller {
 	/**
 	 * gerar_teste
 	 */
-	public function gerar_teste($param)
+	public function gerar_teste($param,$param2)
 	{
 		$cliente_atualizado = $this->clientes->getClientes(['id_cliente' => $this->cliente['id_cliente']]);
-		// if ($cliente_atualizado['codigo_teste'] == $param) {
+		if ($cliente_atualizado['codigo_teste'] == $param) {
 			$this->clientes->updateClientes([
 				'id_cliente' => $this->cliente['id_cliente'],
 				'codigo_teste' => ''
@@ -370,10 +370,20 @@ class Site extends CI_Controller {
 			
 			$this->load->view('site/conta_gerar_teste',[
 				'titulo' => ['Gerar Teste',$this->site['titulo']],
+				'url_teste' => $param2,
 			]);	
-		// } else {
-			// redirect('');
-		// }
+		} else {
+			redirect('');
+		}
+	}
+	// gerador_teste
+	public function gerador_teste() {
+		header('Content-type: application/json');
+		header('Access-Control-Allow-Origin: *'); 
+		$data = [
+			'template' => $this->load->view('site/gerador_page_teste',[],TRUE)
+		];
+		echo json_encode($data);
 	}
 	/**
 	 * envio_comprovante_pagamento
@@ -543,7 +553,6 @@ class Site extends CI_Controller {
 	{
 		
 		if ($this->cliente['status'] != CLIENTE_INATIVO && $this->session->flashdata('no_redirect') === null) redirect('');
-		
 		if (isset($_POST['ativar_cadastro'])) {
 			$this->form_validation->set_rules('codigo_ativacao','Código de Ativação','required');
 			if ($this->form_validation->run() == TRUE) {
@@ -570,7 +579,7 @@ class Site extends CI_Controller {
 						$this->load->view('mail/templates/ativacao_net_template',[
 							'cliente' => $this->cliente,
 							'site_url' => base_url(),
-							'teste_url' => base_url().'conta/gerar/teste/'.$this->cliente['codigo_teste'],
+							'teste_url' => base_url().'conta/gerar/teste/'.$this->cliente['codigo_teste'].'/'.base64_encode($this->cliente['url_teste']),
 							'site' => $this->site
 						],TRUE)
 					);

@@ -7364,6 +7364,9 @@ input[type=range]:focus::-ms-fill-upper {
 .hidden {
   display: none; }
 
+.dropdown-item:focus, .dropdown-item:active, .dropdown-item:checked {
+  background-color: #ff9820; }
+
 .invl-panel-table .table tr:first-child td {
   border-top: none; }
 

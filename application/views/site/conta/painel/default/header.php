@@ -12,7 +12,7 @@
             }
         </style>
         <div class="container">
-            <a class="navbar-brand" href="#" style="color: #fff; font-size: 12px;"><img class="img-fluid" src="<?=base_url('public/images/logo_a.png');?>" style="width: 50px;"> | Central do Cliente</a>
+            <a class="navbar-brand" href="#" style="color: #fff; font-size: 12px;"><img class="img-fluid" src="<?=base_url('public/images/logo_a.png');?>" style="width: 120px;"> | Central do Cliente</a>
         </div>
         <div class="navbar-collapse">
             <ul class="navbar-nav mr-auto mt-md-0 ml-3">

@@ -25,8 +25,10 @@
                             <input class="form-control form-control-lg" type="text" name="senha">
                             <small>Caso não deseja alterar a senha, mantenha este campo em branco.</small>
                         </div>
-                    </div>               
-                    <input class="btn btn-success" type="submit" name="editar_usuario" value="Concluir">
+                    </div>    
+                    <div class="text-right">
+                        <input class="btn btn-primary btn-lg" type="submit" name="editar_usuario" value="Salvar">
+                    </div>           
                 </form>
             </div>
         </div>

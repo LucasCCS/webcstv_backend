@@ -7058,171 +7058,168 @@ body {
 .show {
   display: block; }
 
-.invl-plans,
-.invl-plans-iptv {
-  margin-top: 15px; }
-  .invl-plans .invl-plans-header,
-  .invl-plans-iptv .invl-plans-header {
-    color: #404449;
-    line-height: 1px;
-    margin-top: 100px; }
-    .invl-plans .invl-plans-header h2,
-    .invl-plans-iptv .invl-plans-header h2 {
-      font-family: 'Ubuntu Medium';
-      font-size: 46px;
-      text-transform: uppercase; }
-    .invl-plans .invl-plans-header h3,
-    .invl-plans-iptv .invl-plans-header h3 {
-      font-family: 'Ubuntu Light Italic';
-      font-size: 30px;
-      margin-top: -10px; }
-  .invl-plans .invl-plans-nav,
-  .invl-plans-iptv .invl-plans-nav {
-    margin-top: 50px; }
-    .invl-plans .invl-plans-nav .invl-plans-nav-list,
-    .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list {
-      background-color: #e9e9e9;
-      border-radius: 30px;
-      padding: 5px;
-      list-style: none; }
-      .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item,
-      .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item {
-        display: inline-block;
-        width: 32.65%;
-        text-align: center; }
-        .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link,
-        .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link {
-          font-family: 'Ubuntu Medium';
-          color: #ff8e0b; }
-          .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link:hover,
-          .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link:hover {
-            background-color: #d0d0d0;
-            border-radius: 40px; }
-        .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link.active,
-        .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link.active {
-          color: #fff;
-          background-color: #ff8e0b;
-          border-radius: 40px; }
-      .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item + .nav-item,
-      .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item + .nav-item {
-        margin-left: 1%; }
-  .invl-plans .invl-plans-list,
-  .invl-plans-iptv .invl-plans-list {
-    margin-top: 80px; }
-    @media (max-width: 768px) {
-      .invl-plans .invl-plans-list,
-      .invl-plans-iptv .invl-plans-list {
-        margin-top: 40px; } }
-    .invl-plans .invl-plans-list .destaque,
-    .invl-plans-iptv .invl-plans-list .destaque {
-      margin-top: -40px; }
-      .invl-plans .invl-plans-list .destaque .invl-plans-list-item-header,
-      .invl-plans-iptv .invl-plans-list .destaque .invl-plans-list-item-header {
-        border-top-left-radius: 0px !important; }
-    @media (max-width: 768px) {
-      .invl-plans .invl-plans-list .invl-plans-list-item,
-      .invl-plans-iptv .invl-plans-list .invl-plans-list-item {
-        margin-top: 20px; } }
-    .invl-plans .invl-plans-list .invl-plans-list-item small,
-    .invl-plans-iptv .invl-plans-list .invl-plans-list-item small {
-      opacity: .8;
-      font-family: 'Ubuntu Regular';
-      font-size: 11px; }
-    .invl-plans .invl-plans-list .invl-plans-list-item .btn-plans,
-    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .btn-plans {
-      font-family: 'Ubuntu Medium';
-      text-transform: uppercase;
-      border-radius: 4px;
-      font-size: 20px; }
-    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header-destaque,
-    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header-destaque {
-      background-color: #383838;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      text-align: center;
-      font-family: 'Ubuntu Bold';
-      font-size: 14px;
-      color: #fff;
-      text-transform: uppercase;
-      line-height: 40px; }
-    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header,
-    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header {
-      background-color: #ff8e0b;
-      padding: 40px 20px 20px 20px;
-      color: #fff;
-      text-align: center;
-      border-top-left-radius: 20px; }
-      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header h4,
-      .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header h4 {
+.invl-plans .invl-plans-header,
+.invl-plans-iptv .invl-plans-header {
+  color: #404449;
+  line-height: 1px;
+  margin-top: 100px; }
+  .invl-plans .invl-plans-header h2,
+  .invl-plans-iptv .invl-plans-header h2 {
+    font-family: 'Ubuntu Medium';
+    font-size: 46px;
+    text-transform: uppercase; }
+  .invl-plans .invl-plans-header h3,
+  .invl-plans-iptv .invl-plans-header h3 {
+    font-family: 'Ubuntu Light Italic';
+    font-size: 30px;
+    margin-top: -10px; }
+.invl-plans .invl-plans-nav,
+.invl-plans-iptv .invl-plans-nav {
+  margin-top: 50px; }
+  .invl-plans .invl-plans-nav .invl-plans-nav-list,
+  .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list {
+    background-color: #e9e9e9;
+    border-radius: 30px;
+    padding: 5px;
+    list-style: none; }
+    .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item,
+    .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item {
+      display: inline-block;
+      width: 32.65%;
+      text-align: center; }
+      .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link,
+      .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link {
         font-family: 'Ubuntu Medium';
-        text-transform: uppercase;
-        font-size: 36px; }
-      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header p,
-      .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header p {
-        font-family: 'Ubuntu Light Italic';
-        font-size: 24px;
-        margin-top: -19px; }
-    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body,
-    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body {
-      border-style: solid;
-      border-color: #dcdcdc;
-      border-width: 0px 2px 2px 2px;
-      border-bottom-left-radius: 20px;
-      padding: 20px; }
-      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price,
-      .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price {
+        color: #ff8e0b; }
+        .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link:hover,
+        .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link:hover {
+          background-color: #d0d0d0;
+          border-radius: 40px; }
+      .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link.active,
+      .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item .nav-link.active {
+        color: #fff;
+        background-color: #ff8e0b;
+        border-radius: 40px; }
+    .invl-plans .invl-plans-nav .invl-plans-nav-list .nav-item + .nav-item,
+    .invl-plans-iptv .invl-plans-nav .invl-plans-nav-list .nav-item + .nav-item {
+      margin-left: 1%; }
+.invl-plans .invl-plans-list,
+.invl-plans-iptv .invl-plans-list {
+  margin-top: 80px; }
+  @media (max-width: 768px) {
+    .invl-plans .invl-plans-list,
+    .invl-plans-iptv .invl-plans-list {
+      margin-top: 40px; } }
+  .invl-plans .invl-plans-list .destaque,
+  .invl-plans-iptv .invl-plans-list .destaque {
+    margin-top: -40px; }
+    .invl-plans .invl-plans-list .destaque .invl-plans-list-item-header,
+    .invl-plans-iptv .invl-plans-list .destaque .invl-plans-list-item-header {
+      border-top-left-radius: 0px !important; }
+  @media (max-width: 768px) {
+    .invl-plans .invl-plans-list .invl-plans-list-item,
+    .invl-plans-iptv .invl-plans-list .invl-plans-list-item {
+      margin-top: 20px; } }
+  .invl-plans .invl-plans-list .invl-plans-list-item small,
+  .invl-plans-iptv .invl-plans-list .invl-plans-list-item small {
+    opacity: .8;
+    font-family: 'Ubuntu Regular';
+    font-size: 11px; }
+  .invl-plans .invl-plans-list .invl-plans-list-item .btn-plans,
+  .invl-plans-iptv .invl-plans-list .invl-plans-list-item .btn-plans {
+    font-family: 'Ubuntu Medium';
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 20px; }
+  .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header-destaque,
+  .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header-destaque {
+    background-color: #383838;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    text-align: center;
+    font-family: 'Ubuntu Bold';
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 40px; }
+  .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header,
+  .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header {
+    background-color: #ff8e0b;
+    padding: 40px 20px 20px 20px;
+    color: #fff;
+    text-align: center;
+    border-top-left-radius: 20px; }
+    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header h4,
+    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header h4 {
+      font-family: 'Ubuntu Medium';
+      text-transform: uppercase;
+      font-size: 36px; }
+    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header p,
+    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header p {
+      font-family: 'Ubuntu Light Italic';
+      font-size: 24px;
+      margin-top: -19px; }
+  .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body,
+  .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body {
+    border-style: solid;
+    border-color: #dcdcdc;
+    border-width: 0px 2px 2px 2px;
+    border-bottom-left-radius: 20px;
+    padding: 20px; }
+    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price,
+    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price {
+      text-align: center; }
+      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .old-price,
+      .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .old-price {
+        color: #df4141;
+        text-decoration: line-through; }
+      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price,
+      .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price {
         text-align: center; }
-        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .old-price,
-        .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .old-price {
-          color: #df4141;
-          text-decoration: line-through; }
-        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price,
-        .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price {
-          text-align: center; }
-          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4,
-          .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 {
+        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4,
+        .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 {
+          font-family: 'Ubuntu Bold';
+          font-size: 67px;
+          color: #ff8e0b; }
+          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 span,
+          .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 span {
             font-family: 'Ubuntu Bold';
-            font-size: 67px;
-            color: #ff8e0b; }
-            .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 span,
-            .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 span {
-              font-family: 'Ubuntu Bold';
-              font-size: 20.54px;
-              color: #232427;
-              opacity: .8; }
-            .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4:before,
-            .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4:before {
-              content: 'por R$';
-              position: absolute;
-              margin-left: -15px;
-              margin-top: 15px;
-              font-family: 'Ubuntu Bold';
-              font-size: 13px;
-              width: 10px;
-              color: #232427;
-              opacity: .8; }
-          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price p,
-          .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price p {
+            font-size: 20.54px;
+            color: #232427;
+            opacity: .8; }
+          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4:before,
+          .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4:before {
+            content: 'por R$';
+            position: absolute;
+            margin-left: -15px;
+            margin-top: 15px;
             font-family: 'Ubuntu Bold';
             font-size: 13px;
+            width: 10px;
             color: #232427;
-            margin-top: -20px;
             opacity: .8; }
-      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features,
-      .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features {
-        margin-top: 20px; }
-        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list,
-        .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list {
-          list-style: none;
-          padding-left: 0px; }
-          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li,
-          .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li {
-            font-family: 'Ubuntu Medium';
-            font-size: 19px;
-            color: #ff8e0b; }
-            .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li strong,
-            .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li strong {
-              font-family: 'Ubuntu Bold'; }
+        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price p,
+        .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price p {
+          font-family: 'Ubuntu Bold';
+          font-size: 13px;
+          color: #232427;
+          margin-top: -20px;
+          opacity: .8; }
+    .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features,
+    .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features {
+      margin-top: 20px; }
+      .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list,
+      .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list {
+        list-style: none;
+        padding-left: 0px; }
+        .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li,
+        .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li {
+          font-family: 'Ubuntu Medium';
+          font-size: 19px;
+          color: #ff8e0b; }
+          .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li strong,
+          .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li strong {
+            font-family: 'Ubuntu Bold'; }
 
 .invl-plans-iptv {
   background-color: #00469e !important;
@@ -7450,6 +7447,26 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom; }
+
+.invl-contact {
+  padding: 40px; }
+  .invl-contact .invl-contact-content .invl-contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); }
+    .invl-contact .invl-contact-content .invl-contact-form h1 {
+      font-family: 'Ubuntu Medium';
+      font-size: 25px;
+      margin-bottom: 20px; }
+    .invl-contact .invl-contact-content .invl-contact-form input {
+      margin-bottom: 10px; }
+    .invl-contact .invl-contact-content .invl-contact-form .btn {
+      margin-top: 10px; }
+    .invl-contact .invl-contact-content .invl-contact-form ul {
+      padding-left: 0px; }
+      .invl-contact .invl-contact-content .invl-contact-form ul li {
+        list-style: none; }
 
 .modal-content {
   border: none;

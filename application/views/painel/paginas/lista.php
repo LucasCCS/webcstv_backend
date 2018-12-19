@@ -29,8 +29,8 @@
                       <td><?=$key->slug;?></td>
                       <td><?=$key->titulo;?></td>
                       <td>
-                        <a href="<?=base_url();?>painel/pagina/editar/<?=$key->id_page;?>"><i class="fas fa-pen-square"></i></a>
-                        <a href="<?=base_url();?>painel/pagina/apagar/<?=$key->id_page;?>"><i class="fas fa-trash"></i></a>
+                        <a class="btn btn-primary" href="<?=base_url();?>painel/pagina/editar/<?=$key->id_page;?>"><i class="mdi mdi-pencil"></i></a>
+                        <a class="btn btn-danger" href="<?=base_url();?>painel/pagina/apagar/<?=$key->id_page;?>"><i class="fas fa-trash"></i></a>
                       </td>
                   </tr>
                 <?php

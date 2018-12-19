@@ -32,7 +32,7 @@
                                     <td>'.$key->id_usuario.'</td>
                                     <td>'.$key->usuario.'</td>
                                     <td>
-                                      <a href="'.base_url().'painel/usuario/editar/'.$key->id_usuario.'" class="btn btn-success btn-small"><i class="mdi mdi-pencil"></i></a>
+                                      <a href="'.base_url().'painel/usuario/editar/'.$key->id_usuario.'" class="btn btn-primary btn-small"><i class="mdi mdi-pencil"></i></a>
                                   ';  
                                   if(count($usuarios) > 1) {
                                     echo ' <a href="'.base_url().'painel/usuario/apagar/'.$key->id_usuario.'" class="btn btn-danger btn-small"><i class="mdi mdi-delete"></i></a>';

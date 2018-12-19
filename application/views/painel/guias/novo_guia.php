@@ -29,8 +29,10 @@
                             <label>Url Guia</label>
                             <input class="form-control form-control-lg" type="text" name="video_url">
                         </div>
-                    </div>              
-                    <input class="btn btn-success" type="submit" name="novo_guia" value="Concluir">
+                    </div>         
+                    <div class="text-right">
+                        <input class="btn btn-primary btn-lg" type="submit" name="novo_guia" value="Criar Guia">
+                    </div>
                 </form>
             </div>
         </div>

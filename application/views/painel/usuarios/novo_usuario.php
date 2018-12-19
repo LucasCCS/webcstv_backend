@@ -25,7 +25,9 @@
                             <input class="form-control form-control-lg" type="text" name="senha">
                         </div>
                     </div>              
-                    <input class="btn btn-success" type="submit" name="novo_usuario" value="Concluir">
+                    <div class="text-right">
+                        <input class="btn btn-primary btn-lg" type="submit" name="novo_usuario" value="Criar Usuário">
+                    </div>
                 </form>
             </div>
         </div>

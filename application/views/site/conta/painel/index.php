@@ -27,7 +27,7 @@
             <div class="card-block">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-3 text-center">
-                        <img class="img-fluid" src="<?=base_url();?>public/images/default_user.png">
+                        <img class="img-fluid" src="<?=base_url();?>public/images/default-user.png">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-9">
                         <div class="invl-panel-table">
@@ -58,7 +58,7 @@
                                     </tr>
                                     <tr>
                                         <td>Mensalidade:</td>
-                                        <td><?=$this->cliente['valor'];?></td>
+                                        <td>R$ <?=$this->cliente['valor'];?> </td>
                                     </tr>
                                 </tbody>
                             </table>

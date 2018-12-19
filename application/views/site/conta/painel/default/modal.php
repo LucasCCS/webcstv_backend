@@ -39,7 +39,7 @@
                     <h4>Imagem do Comprovante</h4>
                     <input type="file" name="userfile" required>
                     <br><br>
-                    <input type="submit" class="btn btn-info btn-lg btn-block" name="enviar_comprovante" value="Enviar Comprovante">
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" name="enviar_comprovante" value="Enviar Comprovante">
                 </form>
             </div>
         </div>

@@ -24,8 +24,10 @@
                             <label>Descrição</label>
                             <textarea class="form-control" name="descricao" rows="3"></textarea>
                         </div>
-                    </div>               
-                    <input class="btn btn-success" type="submit" name="novo_faq" value="Concluir">
+                    </div>     
+                    <div class="text-right">
+                        <input class="btn btn-primary btn-lg" type="submit" name="novo_faq" value="Criar FAQ">
+                    </div>          
                 </form>
             </div>
         </div>

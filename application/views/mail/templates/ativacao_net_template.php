@@ -514,7 +514,7 @@
                             <tr>
                                 <th scope="row" class="table-title">Duração do Teste</th>
                                 <td colspan="2">
-                                    hora(s)
+                                    <?=$cliente['duracao_teste'];?> hora(s)
                                 </td>
                             </tr>
                         </tbody>

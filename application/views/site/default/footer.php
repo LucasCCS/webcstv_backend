@@ -5,22 +5,22 @@
                 <div class="row justify-content-around">
                     <div class="col-sm-12 col-md-12 col-lg-3" id="desc">
                         <img class="img-fluid" src="public/images/logo.png">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p><?=$this->site['descricao_footer'];?></p>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-2">
                         <h4>A Empresa</h4>
                         <ul class="invl-footer-list">
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Planos</a></li>
-                            <li><a href="#">Dúvidas Frequentes</a></li>
-                            <li><a href="#">Canais de Atendimento</a></li>
+                            <li><a href="<?=base_url();?>sobre">Sobre</a></li>
+                            <li><a href="<?=base_url();?>planos">Planos</a></li>
+                            <li><a href="<?=base_url();?>duvidas-frequentes">Dúvidas Frequentes</a></li>
+                            <li><a href="<?=base_url();?>contato">Canais de Atendimento</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-2">
                         <h4>Acesso Rápido</h4>
                         <ul class="invl-footer-list">
-                            <li><a href="#">Central do Cliente</a></li>
-                            <li><a href="#">Teste Grátis</a></li>
+                            <li><a href="<?=base_url();?>conta/entrar">Central do Cliente</a></li>
+                            <li><a href="<?=base_url();?>cadastro">Teste Grátis</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-3">

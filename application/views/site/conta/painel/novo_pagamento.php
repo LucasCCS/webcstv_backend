@@ -116,17 +116,6 @@
                                                                 <td><?=$this->cliente['dias'];?></td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Operadora(s):</td>
-                                                                <td><?php
-                                                                        if (isset($cliente_operadoras)) {
-                                                                            foreach($cliente_operadoras as $key) {
-                                                                                echo '<span class="badge badge-default">'.$key->titulo.'</span> ';
-                                                                            }
-                                                                        }
-                                                                    ?>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
                                                                 <td>Valor Total:</td>
                                                                 <td>R$ <?=$this->cliente['valor'];?></td>
                                                             </tr>
@@ -247,17 +236,6 @@
                                                             <tr>
                                                                 <td>Duração:</td>
                                                                 <td><?=$key->dias;?></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Operadora(s):</td>
-                                                                <td><?php
-                                                                        if (isset($cliente_operadoras)) {
-                                                                            foreach($cliente_operadoras as $cliente_operadoras_key) {
-                                                                                echo '<span class="badge badge-default">'.$cliente_operadoras_key->titulo.'</span> ';
-                                                                            }
-                                                                        }
-                                                                    ?>
-                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Valor Total:</td>

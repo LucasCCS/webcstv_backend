@@ -1,3 +1,11 @@
 .hidden {
     display: none;
 }
+
+.dropdown-item {
+    &:focus,
+    &:active,
+    &:checked {
+        background-color: #ff9820;
+    }
+}

@@ -1,4 +1,7 @@
 $(function() {
+    $(document).on("contextmenu", function() {
+        return false;
+    });
     checkSelectedPlan();
     // ----------------------------------------------selectPlan---------------------------------------------
     $('[selectPlan]').on('click', function() {
@@ -23,5 +26,19 @@ $(function() {
                 $('[name="id_subplano"]').val(plan.id_subplano);
             }
         }
+    }
+    // ----------------------------------------------encriptyIframe---------------------------------------------
+    encriptyIframe();
+
+    function encriptyIframe() {
+        var param = $('[iframe-teste]').attr('iframe-teste');
+        $.ajax({
+            type: 'GET',
+            url: 'http://localhost/inovlab/workana/webcstv_backend/gerador/teste/' + param,
+            success: function(r) {
+                $('[iframe-teste]').html(r.template);
+                console.log(r);
+            }
+        });
     }
 })

@@ -29,7 +29,7 @@
                             <input class="form-control form-control-lg" type="text" name="subtitulo">   
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-sm-12 col-md-12 col-lg-6">
                             <label>Duração do Plano (em dias)</label>
                             <input class="form-control form-control-lg" type="text" name="dias">
@@ -39,12 +39,12 @@
                             <input class="form-control form-control-lg" type="text" name="valor">
                             <small>Não é necessário inserir o "$".</small>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
                             <label>Valor Antigo</label>
                             <input class="form-control form-control-lg" type="text" name="valor_antigo" placeholder="0,00">
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-sm-12 col-md-12 col-lg-6">
                             <label>Código PagSeguro</label>
                             <input class="form-control form-control-lg" type="text" name="pagseguro_codigo">
@@ -55,14 +55,17 @@
                             <input class="form-control form-control-lg" type="text" name="mercadopago_codigo">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="row mt-2">
+                        <div class="col-sm-12 col-md-12 col-lg-8">
                             <label>Url Gerador de Teste</label>
-                            <input class="form-control form-control-lg" type="text" name="url_teste">
-                           
+                            <input class="form-control form-control-lg" type="text" name="url_teste">           
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-4">
+                            <label>Duração do Teste (em horas)</label>
+                            <input class="form-control form-control-lg" type="text" name="duracao_teste">                     
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-12">
                             <label>Descrição</label>
                            <textarea class="form-control" name="descricao" rows="4"></textarea>

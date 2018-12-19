@@ -30,7 +30,7 @@
                                 echo '<tr>
                                     <td>'.$key->titulo.'</td>
                                     <td>
-                                      <a href="'.base_url().'painel/faq/editar/'.$key->id_faq.'" class="btn btn-success btn-small"><i class="mdi mdi-pencil"></i></a>
+                                      <a href="'.base_url().'painel/faq/editar/'.$key->id_faq.'" class="btn btn-primary btn-small"><i class="mdi mdi-pencil"></i></a>
                                      <a href="'.base_url().'painel/faq/apagar/'.$key->id_faq.'" class="btn btn-danger btn-small"><i class="mdi mdi-delete"></i></a>  
                                       </td>
                                 </tr>';

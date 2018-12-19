@@ -52,7 +52,7 @@
                                         </div>
                                     </div>
                                     <div class="invl-plans-list-item-action text-center">
-                                        <a class="btn btn-info btn-plans btn-block" href="#">Teste Grátis</a>
+                                        <a class="btn btn-info btn-plans btn-block" href="<?=base_url();?>cadastro" selectPlan="<?=$iptv_mensal->id_plano;?>">Teste Grátis</a>
                                         <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
                                     </div>
                                     <div class="invl-plans-list-item-features">
@@ -96,7 +96,7 @@
                                         </div>
                                     </div>
                                     <div class="invl-plans-list-item-action text-center">
-                                        <a class="btn btn-info btn-plans btn-block" href="#">Teste Grátis</a>
+                                        <a class="btn btn-info btn-plans btn-block" href="<?=base_url();?>cadastro" selectPlan="<?=$iptv_trimestral->id_plano;?>" selectPlanPer="<?=$iptv_trimestral->id_sub_plano;?>">Teste Grátis</a>
                                         <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
                                     </div>
                                     <div class="invl-plans-list-item-features">
@@ -140,7 +140,7 @@
                                         </div>
                                     </div>
                                     <div class="invl-plans-list-item-action text-center">
-                                        <a class="btn btn-info btn-plans btn-block" href="#">Teste Grátis</a>
+                                        <a class="btn btn-info btn-plans btn-block" href="<?=base_url();?>cadastro" selectPlan="<?=$iptv_semestral->id_plano;?>" selectPlanPer="<?=$iptv_semestral->id_sub_plano;?>">Teste Grátis</a>
                                         <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
                                     </div>
                                     <div class="invl-plans-list-item-features">

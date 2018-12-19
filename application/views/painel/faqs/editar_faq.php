@@ -25,7 +25,9 @@
                             <textarea class="form-control" name="descricao" rows="3"><?=$faq['descricao'];?></textarea>
                         </div>
                     </div>               
-                    <input class="btn btn-success" type="submit" name="editar_faq" value="Concluir">
+                    <div class="text-right">
+                        <input class="btn btn-primary btn-lg" type="submit" name="editar_faq" value="Salvar">
+                    </div>
                 </form>
             </div>
         </div>

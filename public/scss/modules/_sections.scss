@@ -1,7 +1,6 @@
 // invl-plans
 .invl-plans,
 .invl-plans-iptv {
-    margin-top: 15px;
     // invl-plans-header
     .invl-plans-header {
         color: #404449;
@@ -508,5 +507,34 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
+    }
+}
+
+.invl-contact {
+    padding: 40px;
+    .invl-contact-content {
+        .invl-contact-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+            h1 {
+                font-family: 'Ubuntu Medium';
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+            input {
+                margin-bottom: 10px;
+            }
+            .btn {
+                margin-top: 10px;
+            }
+            ul {
+                padding-left: 0px;
+                li {
+                    list-style: none;
+                }
+            }
+        }
     }
 }

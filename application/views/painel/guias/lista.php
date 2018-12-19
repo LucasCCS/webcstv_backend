@@ -36,7 +36,7 @@
                                     <td><img width="200" src="'.$key->imagem_url.'"></td>
                                     <td>'.$key->video_url.'</td>
                                     <td>
-                                      <a href="'.base_url().'painel/guia/editar/'.$key->id_guia_instalacao.'" class="btn btn-success btn-small"><i class="mdi mdi-pencil"></i></a>
+                                      <a href="'.base_url().'painel/guia/editar/'.$key->id_guia_instalacao.'" class="btn btn-primary btn-small"><i class="mdi mdi-pencil"></i></a>
                                       <a href="'.base_url().'painel/guia/apagar/'.$key->id_guia_instalacao.'" class="btn btn-danger btn-small"><i class="mdi mdi-delete"></i></a>                        
                                     </td>
                                 </tr>';
