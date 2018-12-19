@@ -583,6 +583,18 @@ class Site extends CI_Controller {
 							'site' => $this->site
 						],TRUE)
 					);
+
+					$this->send_mail(
+						$this->site['email_formularios'],
+						'Novo Teste Iniciado ('.$post['nome'].')',
+						$post['email'],
+						$post['nome'],
+						'sistemas@inovlab.com.br',
+						$this->site['titulo'],
+						'Novo Teste Iniciado',
+						$this->load->view('mail/templates/contato_teste_template',['contato' => $post],TRUE)
+					);
+
 					$this->session->set_flashdata('no_redirect','true');
 					$this->session->set_flashdata('codigo_sucesso','sucesso');
 					redirect('conta/ativacao');			
