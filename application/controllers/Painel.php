@@ -200,6 +200,7 @@ class Painel extends CI_Controller {
 			$this->sub_planos->insertSubPlanos([
 				'valor' => $_POST['valor'],
 				'dias' => $_POST['dias'],
+				'periodicidade' => $_POST['periodicidade'],
 				'pagseguro_codigo' => $_POST['pagseguro_codigo'],
 				'mercadopago_codigo' => $_POST['mercadopago_codigo'],
 				'id_plano' => $_POST['id_plano'],
@@ -436,7 +437,8 @@ class Painel extends CI_Controller {
 			$this->form_validation->set_rules('titulo','Título','required');
 			$this->form_validation->set_rules('imagem_url','Url Thumbnail','required');
 			$this->form_validation->set_rules('video_url','Url Guia','required');
-
+			$this->form_validation->set_rules('header_titulo','Header Título','required');
+			$this->form_validation->set_rules('descricao','Descrição','required');
 			if($this->form_validation->run() == TRUE) {			
 				$data = $this->input->post();
 				unset($data['novo_guia']);
@@ -462,11 +464,15 @@ class Painel extends CI_Controller {
 				$this->form_validation->set_rules('titulo','Título','required');
 				$this->form_validation->set_rules('imagem_url','Url Thumbnail','required');
 				$this->form_validation->set_rules('video_url','Url Guia','required');
+				$this->form_validation->set_rules('header_titulo','Header Título','required');
+				$this->form_validation->set_rules('descricao','descricao','required');
 	
 				if($this->form_validation->run() == TRUE) {		
 					$this->guias->updateGuiaInstalacao([
 						'titulo' => $_POST['titulo'],
 						'imagem_url' => $_POST['imagem_url'],
+						'header_titulo' => $_POST['header_titulo'],
+						'descricao' => $_POST['descricao'],
 						'video_url' => $_POST['video_url'],
 						'id_guia_instalacao' => $id_guia_instalacao
 					]);

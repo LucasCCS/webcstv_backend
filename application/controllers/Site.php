@@ -9,6 +9,7 @@ class Site extends CI_Controller {
 	public $site;
 	public $cliente;
 	public $cliente_servidor_principal;
+	public $guiasInstalacao;
 	public function __construct() 
 	{
 		parent::__construct();
@@ -34,6 +35,7 @@ class Site extends CI_Controller {
 		 * getSiteConfig
 		 */
 		$this->site = $this->site->getSiteConfig();
+		$this->guiasInstalacao = $this->guia_instalacao->getGuiaInstalacao([]);
 		/**
 		 * $cliente
 		 */
@@ -68,6 +70,10 @@ class Site extends CI_Controller {
 			break;
 			case 'cadastro':
 				self::cadastro();
+			break;
+			case 'guias':
+				$guia_slug = empty($this->uri->segment(2)) ? null : $this->uri->segment(2);
+				self::guias($guia_slug);
 			break;
 			default:
 				self::pagina($pagina_slug);
@@ -400,6 +406,17 @@ class Site extends CI_Controller {
 		echo json_encode($data);
 	}
 	/**
+	 * guias
+	 */
+	public function guias($guia_slug = null) 
+	{
+		$guia = $this->guia_instalacao->getGuiaInstalacao(['guia_slug' => $guia_slug]);
+		$this->load->view('site/guias',[
+			'guia' => $guia,
+			'titulo' => [$guia['titulo'],$this->site['titulo']],
+		]);
+	}
+	/**
 	 * logout
 	 */
 	public function logout()
@@ -592,7 +609,9 @@ class Site extends CI_Controller {
 						'sistemas@inovlab.com.br',
 						$this->site['titulo'],
 						'Novo Teste Iniciado',
-						$this->load->view('mail/templates/contato_teste_template',['contato' => $post],TRUE)
+						$this->load->view('mail/templates/contato_teste_template',[
+							'cliente' => $this->cliente
+						],TRUE)
 					);
 
 					$this->session->set_flashdata('no_redirect','true');

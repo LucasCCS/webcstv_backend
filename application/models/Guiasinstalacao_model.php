@@ -13,11 +13,17 @@
             if(isset($options['id_guia_instalacao'])) {
                 $this->db->where('id_guia_instalacao',$options['id_guia_instalacao']);
             }
+            if(isset($options['guia_slug'])) {
+                $this->db->where('guia_slug',$options['guia_slug']);
+            }
             $query = $this->db->get('cms_guias_instalacao');
             if ($query->num_rows() > 0) {
                 if(isset($options['id_guia_instalacao'])) {  
                     return $query->row_array();
-                }else {            
+                } 
+                elseif(isset($options['guia_slug'])) {  
+                    return $query->row_array();
+                } else {            
                     return $query->result();
                 }
             }

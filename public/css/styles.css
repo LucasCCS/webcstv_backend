@@ -6836,6 +6836,10 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   overflow-x: hidden !important; }
 
+@media (max-width: 767px) {
+  .hidden-sm-down {
+    display: none; } }
+
 .btn {
   padding: 6px 25px;
   border-radius: 25px; }
@@ -6885,6 +6889,29 @@ body {
 .btn-hollow {
   background-color: transparent;
   border-width: 2px; }
+
+.invl-top-menu {
+  background-color: #ff9820;
+  height: 50px;
+  padding-top: 10px; }
+  .invl-top-menu .invl-top-menu-list li {
+    list-style: none;
+    display: inline-block; }
+    .invl-top-menu .invl-top-menu-list li a {
+      font-family: 'Ubuntu Medium';
+      font-size: 12px;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase; }
+  .invl-top-menu .invl-top-menu-list li + li {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.6); }
+  .invl-top-menu .dropdown-menu .dropdown-item {
+    color: #000; }
+    .invl-top-menu .dropdown-menu .dropdown-item:focus, .invl-top-menu .dropdown-menu .dropdown-item:active {
+      background-color: #ff9820;
+      color: #fff !important; }
 
 .invl-header {
   position: relative; }
@@ -6993,7 +7020,8 @@ body {
   z-index: 5 !important;
   display: none;
   box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.2);
-  padding: 15px 0px 0px 0px; }
+  padding: 15px 0px 0px 0px;
+  top: 0; }
   .invl-navbar-sm .invl-navbar-brand img {
     width: 180px; }
   .invl-navbar-sm .invl-navbar-nav .invl-navbar-navlist {
@@ -7220,6 +7248,36 @@ body {
           .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li strong,
           .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features .invl-plans-list-item-features-list li strong {
             font-family: 'Ubuntu Bold'; }
+
+.invl-plans-digital-payments {
+  text-align: center; }
+  .invl-plans-digital-payments .invl-plans-digital-payments-list {
+    background-color: #f7f7f7;
+    padding: 6px;
+    border-radius: 20px;
+    text-align: center; }
+    .invl-plans-digital-payments .invl-plans-digital-payments-list li {
+      list-style: none;
+      display: inline-block; }
+      .invl-plans-digital-payments .invl-plans-digital-payments-list li img {
+        width: 250px; }
+    .invl-plans-digital-payments .invl-plans-digital-payments-list li + li {
+      margin-left: 20px; }
+
+.invl-plans-payments {
+  text-align: center; }
+  .invl-plans-payments .invl-plans-payments-list {
+    background-color: #f7f7f7;
+    padding: 20px 6px 20px 6px;
+    border-radius: 20px;
+    text-align: center; }
+    .invl-plans-payments .invl-plans-payments-list li {
+      list-style: none;
+      display: inline-block; }
+      .invl-plans-payments .invl-plans-payments-list li img {
+        width: 150px; }
+    .invl-plans-payments .invl-plans-payments-list li + li {
+      margin-left: 20px; }
 
 .invl-plans-iptv {
   background-color: #00469e !important;
@@ -7449,10 +7507,10 @@ body {
   background-position: bottom; }
 
 .invl-contact {
-  padding: 40px; }
+  padding: 20px 0px 20px 0px; }
   .invl-contact .invl-contact-content .invl-contact-form {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 6px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); }
     .invl-contact .invl-contact-content .invl-contact-form h1 {

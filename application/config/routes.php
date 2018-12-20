@@ -126,7 +126,7 @@ $route['painel/buscar/(:any)'] = 'painel/buscar_ajax/$1';
 // site
 $route['default_controller'] = 'site';
 $route['(:any)'] = 'site/index/$1';
-// $route['(:any)/(:any)'] = 'site/index/$1/$2';
+$route['guias/(:any)'] = 'site/index/guias/$2';
 $route['produtos'] = 'site/produtos';
 $route['buscar/produtos'] = 'site/search_ajax';
 $route['simulador/simular'] = 'site/simulador_ajax';

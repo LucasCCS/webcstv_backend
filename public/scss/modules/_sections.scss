@@ -181,6 +181,46 @@
     }
 }
 
+.invl-plans-digital-payments {
+    text-align: center;
+    .invl-plans-digital-payments-list {
+        background-color: #f7f7f7;
+        padding: 6px;
+        border-radius: 20px;
+        text-align: center;
+        li {
+            list-style: none;
+            display: inline-block;
+            img {
+                width: 250px;
+            }
+        }
+        li+li {
+            margin-left: 20px;
+        }
+    }
+}
+
+.invl-plans-payments {
+    text-align: center;
+    .invl-plans-payments-list {
+        background-color: #f7f7f7;
+        padding: 20px 6px 20px 6px;
+        border-radius: 20px;
+        text-align: center;
+        li {
+            list-style: none;
+            display: inline-block;
+            img {
+                width: 150px;
+            }
+        }
+        li+li {
+            margin-left: 20px;
+        }
+    }
+}
+
 .invl-plans-iptv {
     background-color: #00469e !important;
     padding: 20px 0px 60px 0px;
@@ -511,11 +551,11 @@
 }
 
 .invl-contact {
-    padding: 40px;
+    padding: 20px 0px 20px 0px;
     .invl-contact-content {
         .invl-contact-form {
             background-color: #fff;
-            padding: 20px;
+            padding: 30px;
             border-radius: 6px;
             box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
             h1 {

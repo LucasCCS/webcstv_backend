@@ -159,3 +159,19 @@
     </div>
 </section>
 <!-- /invl-plans -->
+<section class="invl-plans">
+    <div class="container">
+        <div class="invl-plans-header">
+            <h2>Pagamento Facilitado</h2>
+            <h3>Pague utilizando plataformas seguras e com parcelamento.</h3>
+        </div>
+        <div class="invl-plans-digital-payments mt-5">
+            <ul class="invl-plans-digital-payments-list">
+                <li><img src="<?=base_url();?>public/images/pagseguro-icon.png"></li>
+                <li><img src="<?=base_url();?>public/images/mercadopago-icon.png"></li>
+                <li><img src="<?=base_url();?>public/images/paypal-icon.png"></li>
+            </ul>
+            * Acréscimo de R$5,00 para pagamento via PagSeguro/Paypal/MercadoPago.
+        </div>
+    </div>
+</section>

@@ -14,7 +14,7 @@
             <textarea class="form-control" rows="3" name="mensagem" placeholder="Mensagem" solicitar-suporte-mensagem></textarea>
             <div class="invl-contact-form-action">
                 <div contact-form-status class="text-center"></div>
-                <button class="btn btn-info btn-block btn-lg" type="button" solicitar-suporte solicitar-suporte-url="https://api.whatsapp.com/send?phone=55<?=str_replace('-','',str_replace(' ','',str_replace(')','',str_replace('(','',$this->site['whatsapp']))));?>&text=">Enviar Mensagem</button>
+                <button class="btn btn-primary btn-block btn-lg" type="button" solicitar-suporte solicitar-suporte-url="https://api.whatsapp.com/send?phone=55<?=str_replace('-','',str_replace(' ','',str_replace(')','',str_replace('(','',$this->site['whatsapp']))));?>&text=">Enviar Mensagem</button>
             </div>
         </form>
       </div>

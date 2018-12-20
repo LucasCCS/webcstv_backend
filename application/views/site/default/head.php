@@ -14,3 +14,27 @@
 
 <body class="<?php if(isset($body_class)): echo $body_class; endif;?>">
 <?=$this->load->view('site/default/modal',[],TRUE);?>
+<?php if($this->uri->segment(1) != 'conta' && $this->uri->segment(1) != 'cadastro'): ?>
+<div class="invl-top-menu hidden-sm-down">
+    <div class="container">
+        <ul class="invl-top-menu-list">
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Guias de Instalação</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">             
+                    <?php
+                        if (isset($this->guiasInstalacao)) {
+                            foreach ($this->guiasInstalacao as $guia) {
+                                echo '<a class="dropdown-item" href="'.base_url().'guias/'.$guia->guia_slug.'">'.$guia->titulo.'</a>';
+                            }
+                        }
+                    ?>
+                </div>
+            </li>
+            <li>
+                <a href="<?=base_url();?>duvidas-frequentes">Dúvidas Frequentes</a>
+            </li>
+            <li><a href="<?=base_url();?>sobre">Sobre Nós</a></li>
+        </ul>
+    </div>
+</div>
+<?php endif; ?>

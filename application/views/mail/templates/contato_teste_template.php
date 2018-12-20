@@ -499,12 +499,30 @@
                     <img src="<?=base_url();?>public/images/logo.png">
                 </div>
                 <div class="mail-header">
-                    <h3>Conta Ativada com Sucesso</h3>
+                    <h3>Novo teste iniciado</h3>
                 </div>
                 <div class="mail-content">
-                    <h4>Olá <strong><?=$cliente['nome'];?></strong>, sua conta está ativada com sucesso, estas são suas informações:</h4><br>
+                    <h4>O cliente <strong><?=$cliente['nome'];?></strong>, inicou um teste:</h4><br>
                     <table class="table table-bordered">
                         <tbody>
+                            <tr>
+                                <th scope="row" class="table-title">Nome</th>
+                                <td colspan="2">
+                                    <?=$cliente['nome'];?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-title">Email</th>
+                                <td colspan="2">
+                                    <?=$cliente['email'];?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-title">Telefone</th>
+                                <td colspan="2">
+                                    <?=$cliente['telefone'];?>
+                                </td>
+                            </tr>
                             <tr>
                                 <th scope="row" class="table-title">Plano</th>
                                 <td colspan="2">
@@ -513,30 +531,6 @@
                             </tr>
                         </tbody>
                     </table>
-                    <small>* O seu teste possui o prazo de validade de 24 horas.</small>
-                    <br><br>
-                    <a href="<?=$teste_url;?>" class="mail-btn">Gerar Teste</a>
-                    <div style="background-color: #f0f0f0; border:1px solid #ebebeb; padding: 20px; margin-top: 10px;">
-                        <strong>Suporte técnico</strong><br>
-                        <p>Não deixe de nos adicionar no skype e curtir nossa pagina no facebook, assim você sempre ficara informado sobre o status em geral do servidor. Caso você tenha alguma duvida ou problema, basta nos procurar atraves dos meios de comunicação
-                            abaixo:
-                        </p>
-                        <p>📧 E-mail:
-                            <?=$site['email'];?>
-                        </p>
-                        <p>📞 WhatsApp:
-                            <?=$site['whatsapp'];?>
-                        </p>
-                        <p>@ Site:
-                            <?=$site_url;?>
-                        </p>
-                        <p>👍 Facebook:
-                            <?=$site['facebook'];?>
-                        </p>
-                    </div>
-                    <hr>
-                    <strong>Atenciosamente</strong>,<br> Equipe
-                    <?=$site['titulo'];?>
                 </div>
             </div>
         </div>

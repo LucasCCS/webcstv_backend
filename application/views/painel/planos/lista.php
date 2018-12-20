@@ -60,6 +60,12 @@
                                           </div>
                                           <form method="post" style="margin-top: 10px;">
                                             <input type="hidden" name="id_plano" value="'.$key->id_plano.'">
+                                            <label>Periodicidade do Sub-Plano</label>
+                                            <select name="periodicidade" class="form-control">
+                                              <option value="">Selecione a Periodicidade</option>
+                                              <option value="'.PERIODICIDADE_TRIMESTRAL.'">Trimestral</option>
+                                              <option value="'.PERIODICIDADE_SEMESTRAL.'">Semestral</option>
+                                            </select>
                                             <label>Duração em dia(s)</label>
                                             <input class="form-control" type="number" name="dias" placeholder="0" required>
                                             <div class="row">

@@ -15,9 +15,13 @@
                 ?>
                 <form method="post">
                     <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
                             <label>Titulo</label>
                             <input class="form-control form-control-lg" type="text" name="titulo" value="<?=$guia['titulo'];?>">                         
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <label>Header Titulo</label>
+                            <input class="form-control form-control-lg" type="text" name="header_titulo" value="<?=$guia['header_titulo'];?>">                         
                         </div>
                     </div>   
                     <div class="row">
@@ -29,7 +33,13 @@
                             <label>Url Guia</label>
                             <input class="form-control form-control-lg" type="text" name="video_url" value="<?=$guia['video_url'];?>">
                         </div>
-                    </div>      
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <label>Descrição</label>
+                            <textarea name="descricao" class="form-control" rows="3"><?=$guia['descricao'];?></textarea>
+                        </div>
+                    </div>   
                     <div class="text-right">
                         <input class="btn btn-primary btn-lg" type="submit" name="editar_guia" value="Salvar">
                     </div>        

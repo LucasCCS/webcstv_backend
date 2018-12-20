@@ -1,7 +1,7 @@
 <!-- invl-contact -->
 <section class="invl-contact">
     <div class="container">
-        <div class="invl-contact-content">
+        <div class="invl-contact-content" style="padding-top: 80px;">
             <div class="row d-flex">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                     <div class="invl-contact-form">

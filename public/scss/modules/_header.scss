@@ -1,3 +1,37 @@
+.invl-top-menu {
+    background-color: #ff9820;
+    height: 50px;
+    padding-top: 10px;
+    .invl-top-menu-list {
+        li {
+            list-style: none;
+            display: inline-block;
+            a {
+                font-family: 'Ubuntu Medium';
+                font-size: 12px;
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+        li+li {
+            margin-left: 10px;
+            padding-left: 10px;
+            border-left: 1px solid rgba(255, 255, 255, .6);
+        }
+    }
+    .dropdown-menu {
+        .dropdown-item {
+            color: #000;
+            &:focus,
+            &:active {
+                background-color: #ff9820;
+                color: #fff !important;
+            }
+        }
+    }
+}
+
 // invl-header
 .invl-header {
     position: relative;
@@ -141,6 +175,7 @@
     display: none;
     box-shadow: 3px 3px 30px rgba(0, 0, 0, .2);
     padding: 15px 0px 0px 0px;
+    top: 0;
     .invl-navbar-brand {
         img {
             width: 180px;

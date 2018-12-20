@@ -17,32 +17,32 @@
                 <div class="row" slick-channels>
                     <div class="col-sm-12 col-md-12 col-lg-3">
                         <div class="invl-call-to-action-teste-channels-list-item">
-                            <img class="img-fluid" src="public/images/channel-01.png">
+                            <img class="img-fluid" src="<?=base_url();?>public/images/channel-01.png">
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-3">
                         <div class="invl-call-to-action-teste-channels-list-item">
-                            <img class="img-fluid" src="public/images/channel-02.png">
+                            <img class="img-fluid" src="<?=base_url();?>public/images/channel-02.png">
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-3">
                         <div class="invl-call-to-action-teste-channels-list-item">
-                            <img class="img-fluid" src="public/images/channel-03.png">
+                            <img class="img-fluid" src="<?=base_url();?>public/images/channel-03.png">
                         </div>
                     </div>                   
                     <div class="col-sm-12 col-md-12 col-lg-3">
                         <div class="invl-call-to-action-teste-channels-list-item">
-                            <img class="img-fluid" src="public/images/channel-05.png">
+                            <img class="img-fluid" src="<?=base_url();?>public/images/channel-05.png">
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-3">
                         <div class="invl-call-to-action-teste-channels-list-item">
-                            <img class="img-fluid" src="public/images/channel-06.png">
+                            <img class="img-fluid" src="<?=base_url();?>public/images/channel-06.png">
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-3">
                         <div class="invl-call-to-action-teste-channels-list-item">
-                            <img class="img-fluid" src="public/images/channel-04.png">
+                            <img class="img-fluid" src="<?=base_url();?>public/images/channel-04.png">
                         </div>
                     </div>
                 </div>

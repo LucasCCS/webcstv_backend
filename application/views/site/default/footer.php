@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row justify-content-around">
                     <div class="col-sm-12 col-md-12 col-lg-3" id="desc">
-                        <img class="img-fluid" src="public/images/logo.png">
+                        <img class="img-fluid" src="<?=base_url();?>public/images/logo.png">
                         <p><?=$this->site['descricao_footer'];?></p>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-2">
@@ -26,8 +26,8 @@
                     <div class="col-sm-12 col-md-12 col-lg-3">
                         <h4>Acompanhe-nos</h4>
                         <ul class="invl-footer-social-list">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="<?=$this->site['facebook'];?>"><i class="fab fa-facebook-f"></i></a></li>
+                            <!-- <li><a href="#"><i class="fab fa-instagram"></i></a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -43,8 +43,8 @@
     </footer>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="<?=base_url();?>public/slick/slick.min.js"></script>
     <script src="<?=base_url();?>public/js/app.js"></script>
 </body>
