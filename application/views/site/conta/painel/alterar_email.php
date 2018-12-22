@@ -1,4 +1,7 @@
-<?=$this->load->view('site/conta/painel/default/head',[],TRUE);?>
+<?=$this->load->view('site/conta/painel/default/head',[
+    'titulo' => 'Alterar E-mail',
+    'page_url' => base_url().'conta/alterar/email'
+],TRUE);?>
 
 <div class="row">
     <div class="col-12">

@@ -1,4 +1,7 @@
-<?=$this->load->view('site/conta/painel/default/head',[],TRUE);?>
+<?=$this->load->view('site/conta/painel/default/head',[
+    'titulo' => 'Novo Pagamento',
+    'page_url' => base_url().'conta/novo/pagamento'
+],TRUE);?>
 
 <div class="row">
     <div class="col-12">
@@ -66,7 +69,7 @@
                             </div>
                             <div class="invl-plans-list-item-body">
                                 <div class="invl-plans-list-item-price">
-                                    <span class="old-price">de R$ <?=$this->cliente['subtitulo'];?></span>
+                                    <span class="old-price">de R$ <?=$this->cliente['valor_antigo'];?></span>
                                     <div class="new-price">
                                         <?php
                                             $valor = explode(',',$this->cliente['valor']); 
@@ -171,6 +174,7 @@
                     </div>
                     <?php
                         if (isset($sub_planos)):
+                            if($this->cliente['plano_tipo'] == PLANO_TIPO_IPTV) unset($sub_planos[0]);
                             foreach($sub_planos as $key):
                                 $valor_dia_sub = intval($key->valor) / intval($key->dias);
                     ?>    
@@ -192,7 +196,17 @@
                                                     $valor = explode(',',$key->valor); 
                                                 ?>
                                                 <h4><?=$valor[0];?><span>,<?=$valor[1]?></span></h4>
-                                                <p>por trimestre</p>
+                                                <p>por <?php
+                                                    switch($key->periodicidade) {
+                                                        case PERIODICIDADE_TRIMESTRAL:
+                                                            echo 'trimestral';
+                                                        break;
+
+                                                        case PERIODICIDADE_SEMESTRAL:
+                                                            echo 'semestral';
+                                                        break;
+                                                    }
+                                                ?></p>
                                             </div>
                                         </div>
                                         <div class="invl-plans-list-item-action text-center">

@@ -292,9 +292,11 @@ class Site extends CI_Controller {
 	 */
 	public function conta_novo_pagamento()
 	{
+		if($this->cliente['plano_tipo'] != PLANO_TIPO_IPTV) $planos = $this->sub_planos->getSubPlanos(['id_plano' => $this->cliente['id_plano']]);
+		else $planos = $this->sub_planos->getPlanos(['plano_tipo' => $this->cliente['PLANO_TIPO_IPTV']]);
 		$this->load->view('site/conta/painel/novo_pagamento',[
 			'titulo' => ['Dados da Assinatura',$this->site['titulo']],
-			'sub_planos' => $this->sub_planos->getSubPlanos(['id_plano' => $this->cliente['id_plano']]),
+			'sub_planos' => $planos,
 			'metodos_pagamento' => $this->metodos_pagamento->getMetodosPagamento(),
 			'cliente_operadoras' => $this->cliente_operadoras->getClienteOperadoras(['id_cliente' => $this->cliente['id_cliente']])
 		]);		
@@ -451,9 +453,7 @@ class Site extends CI_Controller {
 				'planos_cs_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_MENSAL]),
 				'planos_cs_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
 				'planos_cs_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
-				'planos_iptv_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_MENSAL]),
-				'planos_iptv_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
-				'planos_iptv_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
+				'planos_iptv' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_IPTV]),
 				'faq' => $this->faq->getFaq(),
 				'titulo' => [$this->site['titulo'],$this->site['slogan']],
 			]);
@@ -488,9 +488,7 @@ class Site extends CI_Controller {
 			'planos_cs_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_MENSAL]),
 			'planos_cs_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
 			'planos_cs_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
-			'planos_iptv_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_MENSAL]),
-			'planos_iptv_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
-			'planos_iptv_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
+			'planos_iptv' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_IPTV]),
 			'titulo' => ['Planos CardSharing',$this->site['titulo']],
 		]);
 	}
@@ -524,9 +522,7 @@ class Site extends CI_Controller {
 			'planos_cs_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_MENSAL]),
 			'planos_cs_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
 			'planos_cs_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_CS, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
-			'planos_iptv_mensal' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_MENSAL]),
-			'planos_iptv_trimestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_TRIMESTRAL]),
-			'planos_iptv_semestral' => $this->sub_planos->getSubPlanos(['plano_tipo' => PLANO_TIPO_IPTV, 'periodicidade' => PERIODICIDADE_SEMESTRAL]),
+			'planos_iptv' => $this->planos->getPlanos(['plano_tipo' => PLANO_TIPO_IPTV]),
 		]);
 	}
 	/**

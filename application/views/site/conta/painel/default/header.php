@@ -29,7 +29,6 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Olá, <?=$this->cliente['nome']?> <i class="mdi mdi-menu-down"></i></a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="margin-left: -50px;">
-                        <a class="dropdown-item" href="#" class="mr-3" data-toggle="modal" data-target="#comprovanteForm">Informar Pagamento</a>
                         <a class="dropdown-item" href="<?=base_url();?>conta/sair">Sair</a>
                     </div>
                 </li>

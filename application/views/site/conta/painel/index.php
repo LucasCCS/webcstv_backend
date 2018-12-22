@@ -1,4 +1,7 @@
-<?=$this->load->view('site/conta/painel/default/head',[],TRUE);?>
+<?=$this->load->view('site/conta/painel/default/head',[
+    'titulo' => 'Minha Conta',
+    'page_url' => base_url()
+],TRUE);?>
 
 <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12 text-center mb-5 mt-5">
@@ -9,7 +12,7 @@
         <div class="card card-inverse card-primary mb-3 text-center">
             <div class="card-block">
                 <h2 style="color: #fff; opacity: .6;">Plano Ativo:</h2>
-                <h1 style="color: #fff;"><?=$this->cliente['titulo'];?></h1>
+                <h1 style="color: #fff;"><?=$this->cliente['titulo'];?> <?php if(isset($this->cliente['subtitulo'])): echo '<small style="font-size: 18px; opacity: .8;">'.$this->cliente['subtitulo'].'</small>'; endif;?></h1>
                 <!-- <h1 style="color: #fff;"><i class="mdi mdi-calendar-clock"></i></h1><p>  -->
                 <!-- <?php
                     $date1 = time();
@@ -28,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-12 col-md-12 col-lg-4">
+    <div class="col-sm-12 col-md-12 col-lg-6">
         <a href="#" data-toggle="modal" data-target="#exampleModal">
             <div class="card card-inverse card-default mb-3 text-center">
                 <div class="card-block">
@@ -37,20 +40,11 @@
             </div>
         </a>
     </div>
-    <div class="col-sm-12 col-md-12 col-lg-4">
+    <div class="col-sm-12 col-md-12 col-lg-6">
         <a href="<?=base_url();?>conta/guias/instalacao">
             <div class="card card-inverse card-default mb-3 text-center">
                 <div class="card-block">
                 <h3>Guias de Instalação</h3>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-sm-12 col-md-12 col-lg-4">
-        <a href="<?=base_url();?>conta/central-de-atendimento">
-            <div class="card card-inverse card-default mb-3 text-center">
-                <div class="card-block">
-                <h3>Central de Atendimento</h3>
                 </div>
             </div>
         </a>

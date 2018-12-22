@@ -16,19 +16,7 @@ File: scss
  *	7. Widgets
  *	8. Custom Templates
  */
-/*
-Template Name: Material Pro Admin
-Author: Themedesigner
-Email: niravjoshi87@gmail.com
-File: scss
-*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
-/*Theme Colors*/
-/*bootstrap Color*/
-/*Light colors*/
-/*Normal Color*/
-/*Extra Variable*/
-/*Preloader*/
 @import url(../scss/icons/font-awesome/css/font-awesome.min.css);
 @import url(../scss/icons/simple-line-icons/css/simple-line-icons.css);
 @import url(../scss/icons/weather-icons/css/weather-icons.min.css);
@@ -39,6 +27,69 @@ File: scss
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 @import url(../css/spinners.css);
 @import url(../css/animate.css);
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: url("fonts/BebasNeue-Regular.otf"); }
+@font-face {
+  font-family: 'Chunkfive Ex';
+  src: url("fonts/Chunkfive Ex.ttf"); }
+@font-face {
+  font-family: 'The Boundaries';
+  src: url("fonts/The Boundaries.otf"); }
+@font-face {
+  font-family: 'Ubuntu Bold';
+  src: url("fonts/Ubuntu-Bold.ttf"); }
+@font-face {
+  font-family: 'Ubuntu Bold Italic';
+  src: url("fonts/Ubuntu-Bold-Italic.ttf"); }
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  src: url("fonts/Ubuntu-Condensed.ttf"); }
+@font-face {
+  font-family: 'Ubuntu Light';
+  src: url("fonts/Ubuntu-Light.ttf"); }
+@font-face {
+  font-family: 'Ubuntu Light Italic';
+  src: url("fonts/Ubuntu-Light-Italic.ttf"); }
+@font-face {
+  font-family: 'Ubuntu Medium';
+  src: url("fonts/Ubuntu-Medium.ttf"); }
+@font-face {
+  font-family: 'Ubuntu Medium Italic';
+  src: url("fonts/Ubuntu-Medium-Italic.ttf"); }
+@font-face {
+  font-family: 'UbuntuMono Bold';
+  src: url("fonts/UbuntuMono-Bold.ttf"); }
+@font-face {
+  font-family: 'UbuntuMono Bold Italic';
+  src: url("fonts/UbuntuMono-Bold-Italic.ttf"); }
+@font-face {
+  font-family: 'UbuntuMono';
+  src: url("fonts/UbuntuMono.ttf"); }
+@font-face {
+  font-family: 'UbuntuMono Italic';
+  src: url("fonts/UbuntuMono-Italic.ttf"); }
+@font-face {
+  font-family: 'UbuntuMono Italic';
+  src: url("fonts/UbuntuMono-Italic.ttf"); }
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("fonts/Ubuntu.ttf"); }
+@font-face {
+  font-family: 'Ubuntu Italic';
+  src: url("fonts/Ubuntu-Italic.ttf"); }
+/*
+Template Name: Material Pro Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+/*Theme Colors*/
+/*bootstrap Color*/
+/*Light colors*/
+/*Normal Color*/
+/*Extra Variable*/
+/*Preloader*/
 .preloader {
   width: 100%;
   height: 100%;
@@ -7459,12 +7510,13 @@ input[type=range]:focus::-ms-fill-upper {
   .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header h4 {
     font-family: 'Ubuntu Medium';
     text-transform: uppercase;
-    font-size: 36px; }
+    font-size: 36px;
+    color: #fff; }
   .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header p,
   .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-header p {
     font-family: 'Ubuntu Light Italic';
     font-size: 24px;
-    margin-top: -19px; }
+    margin-top: -10px; }
 .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body,
 .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body {
   border-style: solid;
@@ -7481,6 +7533,7 @@ input[type=range]:focus::-ms-fill-upper {
       text-decoration: line-through; }
     .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price,
     .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price {
+      margin-top: 12px;
       text-align: center; }
       .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4,
       .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4 {
@@ -7497,8 +7550,8 @@ input[type=range]:focus::-ms-fill-upper {
         .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-price .new-price h4:before {
           content: 'por R$';
           position: absolute;
-          margin-left: -15px;
-          margin-top: 15px;
+          margin-left: -22px;
+          margin-top: -15px;
           font-family: 'Ubuntu Bold';
           font-size: 13px;
           width: 10px;
@@ -7509,7 +7562,7 @@ input[type=range]:focus::-ms-fill-upper {
         font-family: 'Ubuntu Bold';
         font-size: 13px;
         color: #232427;
-        margin-top: -20px;
+        margin-top: -10px;
         opacity: .8; }
   .invl-plans .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features,
   .invl-plans-iptv .invl-plans-list .invl-plans-list-item .invl-plans-list-item-body .invl-plans-list-item-features {

@@ -42,9 +42,9 @@
             <div class="container-fluid">
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor">Principal</h3>
+                        <h3 class="text-themecolor"><?php if(isset($titulo)): echo $titulo; else: echo 'Principal'; endif;?></h3>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Principal</a></li>
+                            <li class="breadcrumb-item"><a href="<?php if(isset($page_url)): echo $page_url; else: echo '#'; endif;?>"><?php if(isset($titulo)): echo $titulo; else: 'Principal'; endif;?></a></li>
                             <li class="breadcrumb-item active">Visão Geral</li>
                         </ol>
                     </div>

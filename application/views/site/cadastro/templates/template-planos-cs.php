@@ -20,13 +20,18 @@
         </div>
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-plano-mes" role="tabpanel" aria-labelledby="pills-plano-mes-tab">
-                <div class="invl-plans-list" style="margin-top: 10px;">   
+                <div class="invl-plans-list">   
                     <div class="row">
                         <?php
                             if(isset($planos_cs_mensal)):
                                 foreach($planos_cs_mensal as $cs_mensal):
                         ?>
-                        <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="col-sm-12 col-md-6 col-lg-3"  
+                        <?php
+                            if($cs_mensal->status == PLANO_STATUS_DESATIVO) {
+                                echo 'style="opacity: .8;"';
+                            }
+                        ?>>
                             <div class="invl-plans-list-item">
                                 <div class="invl-plans-list-item-header">
                                     <h4><?=$cs_mensal->titulo;?></h4>
@@ -48,7 +53,11 @@
                                         </div>
                                     </div>
                                     <div class="invl-plans-list-item-action text-center">
-                                        <button type="button" class="btn btn-primary btn-plans btn-block" selectPlan="<?=$cs_mensal->id_plano;?>">Teste Grátis</button>
+                                        <?php if($cs_mensal->status == PLANO_STATUS_DESATIVO): ?>
+                                        <a class="btn btn-primary btn-plans btn-block" href="#">Indisponível</a>
+                                        <?php else: ?>
+                                        <a class="btn btn-primary btn-plans btn-block" href="<?=base_url();?>cadastro" selectPlan="<?=$cs_mensal->id_plano;?>">Teste Grátis</a>
+                                        <?php endif; ?>
                                         <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
                                     </div>
                                     <div class="invl-plans-list-item-features">
@@ -64,13 +73,19 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-plano-trimestral" role="tabpanel" aria-labelledby="pills-plano-trimestral-tab">
-                <div class="invl-plans-list"  style="margin-top: 10px;">   
+                <div class="invl-plans-list">   
                     <div class="row">
                         <?php
                             if(isset($planos_cs_trimestral)):
                                 foreach($planos_cs_trimestral as $cs_trimestral):
                         ?>
-                        <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="col-sm-12 col-md-6 col-lg-3" 
+                        <?php
+                            if($cs_trimestral->status == PLANO_STATUS_DESATIVO) {
+                                echo 'style="opacity: .8;"';
+                            }
+                        ?>
+                        >
                             <div class="invl-plans-list-item">
                                 <div class="invl-plans-list-item-header">
                                     <h4><?=$cs_trimestral->titulo;?></h4>
@@ -92,7 +107,11 @@
                                         </div>
                                     </div>
                                     <div class="invl-plans-list-item-action text-center">
-                                        <button type="button" class="btn btn-primary btn-plans btn-block" selectPlan="<?=$cs_trimestral->id_plano;?>" selectPlanPer="<?=$cs_trimestral->id_sub_plano;?>">Teste Grátis</button>
+                                        <?php if($cs_trimestral->status == PLANO_STATUS_DESATIVO): ?>
+                                        <a class="btn btn-primary btn-plans btn-block" href="#">Indisponível</a>
+                                        <?php else: ?>
+                                        <a class="btn btn-primary btn-plans btn-block" href="<?=base_url();?>cadastro" selectPlan="<?=$cs_trimestral->id_plano;?>" selectPlanPer="<?=$cs_trimestral->id_sub_plano;?>">Teste Grátis</a>
+                                        <?php endif; ?>
                                         <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
                                     </div>
                                     <div class="invl-plans-list-item-features">
@@ -108,13 +127,19 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-plano-semestral" role="tabpanel" aria-labelledby="pills-plano-semestral-tab">
-                <div class="invl-plans-list"  style="margin-top: 10px;">   
+                <div class="invl-plans-list">   
                     <div class="row">
                         <?php
                             if(isset($planos_cs_semestral)):
                                 foreach($planos_cs_semestral as $cs_semestral):
                         ?>
-                        <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="col-sm-12 col-md-6 col-lg-3" 
+                        <?php
+                            if($cs_semestral->status == PLANO_STATUS_DESATIVO) {
+                                echo 'style="opacity: .8;"';
+                            }
+                        ?>
+                        >
                             <div class="invl-plans-list-item">
                                 <div class="invl-plans-list-item-header">
                                     <h4><?=$cs_semestral->titulo;?></h4>
@@ -136,7 +161,11 @@
                                         </div>
                                     </div>
                                     <div class="invl-plans-list-item-action text-center">
-                                        <button type="button" class="btn btn-primary btn-plans btn-block" selectPlan="<?=$cs_semestral->id_plano;?>" selectPlanPer="<?=$cs_semestral->id_sub_plano;?>">Teste Grátis</button>
+                                        <?php if($cs_semestral->status == PLANO_STATUS_DESATIVO): ?>
+                                        <a class="btn btn-primary btn-plans btn-block" href="#">Indisponível</a>
+                                        <?php else: ?>
+                                        <a class="btn btn-primary btn-plans btn-block" href="<?=base_url();?>cadastro" selectPlan="<?=$cs_semestral->id_plano;?>" selectPlanPer="<?=$cs_semestral->id_sub_plano;?>">Teste Grátis</a>
+                                        <?php endif; ?>
                                         <small class="text-muted mr-1 ml-1">Teste hoje mesmo, sem nenhum custo.</small>
                                     </div>
                                     <div class="invl-plans-list-item-features">
