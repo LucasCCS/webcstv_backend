@@ -17,6 +17,31 @@
                     </div>
                 </div>
             </div>
+            <div class="carousel-item" style="background-image: url('public/images/header-bg-05.jpg');">
+                <div class="container">
+                    <div id="area-cliente">
+                        <div class="row justify-content-end">
+                            <div class="col-sm-12 col-md-12 col-lg-5">
+                                <h1>Tenha acesso<br><span>aos melhores filmes</span></h1>
+                                <a class="btn btn-primary btn-carousel btn-block mt-2" href="<?=base_url();?>cadastro">Teste Gratuitamente</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('public/images/header-bg-06.jpg');">
+                <div class="container">
+                    <div id="teste-gratuito">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-5">
+                                <h1>O melhor em IPTV e CardSharing<br><span>para sua família</span></h1>
+                                <a class="btn btn-primary btn-carousel btn-block mt-2" href="<?=base_url();?>planos">Conhecer planos</a>
+                                <div class="text-center"><small>Teste hoje mesmo, sem custo.</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
              <div class="carousel-item" style="background-image: url('public/images/header-bg-04.jpg');">
                 <div class="container">
                     <div id="teste-gratuito">
