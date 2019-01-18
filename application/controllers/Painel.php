@@ -14,7 +14,6 @@ class Painel extends CI_Controller {
 		$this->load->model('paginas_model','paginas');
 		$this->load->model('clientes_model','clientes');
 		$this->load->model('metodospagamento_model','metodos_pagamento');
-		$this->load->model('historicopagamentos_model','historico_pagamentos');
 		$this->load->model('planos_model','planos');
 		$this->load->model('guiasinstalacao_model','guias');
 		$this->load->model('subplanos_model','sub_planos');
