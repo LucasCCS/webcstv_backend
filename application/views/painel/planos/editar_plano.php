@@ -46,14 +46,18 @@
                         </div>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-sm-12 col-md-12 col-lg-6">
+                        <div class="col-sm-12 col-md-12 col-lg-4">
                             <label>Código PagSeguro</label>
                             <input class="form-control form-control-lg" type="text" name="pagseguro_codigo" value="<?=$plano['pagseguro_codigo'];?>">
                            
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6">
+                        <div class="col-sm-12 col-md-12 col-lg-4">
                             <label>Código MercadoPago</label>
                             <input class="form-control form-control-lg" type="text" name="mercadopago_codigo" value="<?=$plano['mercadopago_codigo'];?>">
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-4">
+                            <label>Código Paypal</label>
+                            <input class="form-control form-control-lg" type="text" name="paypal_codigo" value="<?=$plano['paypal_codigo'];?>">
                         </div>
                     </div>
                     <div class="row mt-2">

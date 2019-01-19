@@ -136,7 +136,7 @@
 
                                                     <div class="col-sm-12 col-md-12 col-lg-12">
                                                         <div class="invl-form-metodo-pagamento text-center">
-                                                            <ul class="invl-form-metodo-pagamento-list">
+                                                            <ul class="invl-form-metodo-pagamento-list text-center">
                                                                 <?php
                                                                     if (isset($metodos_pagamento)):
                                                                         foreach($metodos_pagamento as $key):
@@ -148,10 +148,23 @@
                                                                                 case 'pagseguro':
                                                                                     $codigo_produto = $this->cliente['pagseguro_codigo'];
                                                                                 break;
+                                                                                case 'paypal':
+                                                                                    $codigo_produto = $this->cliente['paypal_codigo'];
+                                                                                break;
                                                                             }
                                                                 ?>
                                                                 <li>
+                                                                    <?php
+                                                                        if(strtolower($key->titulo) == 'paypal'):
+                                                                    ?>
+                                                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                                                        <input type="hidden" name="hosted_button_id" value="<?=$codigo_produto;?>">
+                                                                        <input type="image" src="<?=$key->imagem_logo?>" width="230" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
+                                                                    </form>
+                                                                    <?php else: ?>
                                                                     <a href="<?=$key->checkout_url.$codigo_produto;?>" target="_blank"><img class="img-fluid" src="<?=$key->imagem_logo?>"></a>
+                                                                    <?php endif; ?>
                                                                 </li>
                                                                 <?php                                   
                                                                         endforeach;
@@ -281,10 +294,23 @@
                                                                                 case 'pagseguro':
                                                                                     $codigo_produto = $key->pagseguro_codigo;
                                                                                 break;
+                                                                                case 'paypal':
+                                                                                    $codigo_produto = $key->paypal_codigo;
+                                                                                break;
                                                                             }
                                                                 ?>
                                                                 <li>
+                                                                    <?php
+                                                                        if(strtolower($metodo_pagamento_key->titulo) == 'paypal'):
+                                                                    ?>
+                                                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                                                        <input type="hidden" name="hosted_button_id" value="<?=$codigo_produto;?>">
+                                                                        <input type="image" src="<?=$metodo_pagamento_key->imagem_logo?>" width="230" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
+                                                                    </form>
+                                                                    <?php else: ?>
                                                                     <a href="<?=$metodo_pagamento_key->checkout_url.$codigo_produto;?>" target="_blank"><img class="img-fluid" src="<?=$metodo_pagamento_key->imagem_logo?>"></a>
+                                                                    <?php endif; ?>
                                                                 </li>
                                                                 <?php                                   
                                                                         endforeach;
