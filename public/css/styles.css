@@ -9557,6 +9557,24 @@ body {
   list-style: none;
 }
 
+.invl-form-metodo-pagamento .invl-form-metodo-pagamento-list {
+  list-style: none;
+  padding-left: 0px;
+}
+.invl-form-metodo-pagamento .invl-form-metodo-pagamento-list li {
+  display: inline-block;
+}
+.invl-form-metodo-pagamento .invl-form-metodo-pagamento-list li img {
+  width: 230px;
+  opacity: 0.6;
+}
+.invl-form-metodo-pagamento .invl-form-metodo-pagamento-list li img:hover {
+  opacity: 1;
+}
+.invl-form-metodo-pagamento .invl-form-metodo-pagamento-list li + li {
+  margin-top: 10px;
+}
+
 .modal-content {
   border: none;
   box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.3);

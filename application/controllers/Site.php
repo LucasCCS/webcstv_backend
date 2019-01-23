@@ -10,6 +10,7 @@ class Site extends CI_Controller {
 	public $cliente;
 	public $cliente_servidor_principal;
 	public $guiasInstalacao;
+	public $metodos_pagamento;
 	public function __construct() 
 	{
 		parent::__construct();
@@ -30,7 +31,8 @@ class Site extends CI_Controller {
 		// Custom Libraries
 		$this->load->library('sitemenu');
 		$this->load->library('auth');
-	
+		$this->metodos_pagamento = $this->metodos_pagamento->getMetodosPagamento();
+		
 		/**
 		 * getSiteConfig
 		 */
@@ -297,7 +299,7 @@ class Site extends CI_Controller {
 		$this->load->view('site/conta/painel/novo_pagamento',[
 			'titulo' => ['Dados da Assinatura',$this->site['titulo']],
 			'sub_planos' => $planos,
-			'metodos_pagamento' => $this->metodos_pagamento->getMetodosPagamento(),
+			'metodos_pagamento' => $this->metodos_pagamento,
 			'cliente_operadoras' => $this->cliente_operadoras->getClienteOperadoras(['id_cliente' => $this->cliente['id_cliente']])
 		]);		
 	}
@@ -694,23 +696,22 @@ class Site extends CI_Controller {
 		]);
 		// send_sms($numero,$campanha,$texto)
 		$telefone = str_replace(' ','',(str_replace('-','',str_replace('(','',str_replace(')','',$post['telefone'])))));
-		self::send_sms($telefone,'Seu código de ativação','O seu código de ativação é: '.$codigo_ativacao.'.');	
+		self::send_sms($telefone,'O seu código de ativação é: '.$codigo_ativacao.'.');	
 	}
 
 	/**
 	 * send_sms
 	 */
-	function send_sms($numero,$campanha,$texto) {
+	function send_sms($numero,$texto) {
 		$ch = curl_init();
 		$data = http_build_query([
-			'codigo' => '176',
-			'token' => '02aa629c8b16cd17a44f3a0efec2feed43937642',
-			'tipo' => '1',
-			'campanha' => $campanha,
-			'textosms' => $texto,
-			'numero' => $numero
+			'action' => 'sendSMS',
+			'token' => '78dcb43c52ac79c127d9',
+			'tipo' => '3',
+			'msg' => $texto,
+			'numbers' => $numero
 		]);
-		curl_setopt($ch, CURLOPT_URL,"http://178.33.136.60/api/api_sistema.php?".$data);
+		curl_setopt($ch, CURLOPT_URL,"http://172.246.132.11/app/modulo/api/index.php?".$data);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.0.3705; .NET CLR 1.1.4322)');
